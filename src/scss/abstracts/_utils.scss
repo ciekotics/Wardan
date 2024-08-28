@@ -1,0 +1,25 @@
+@each $key, $value in $dimensions {
+  .h-#{$key} {
+    @include height($value);
+  }
+}
+
+@each $key, $value in $margins {
+  .mx-#{$key} {
+    @include margin-inline($value);
+  }
+}
+
+@each $key, $value in $margins {
+  .mr-#{$key} {
+    @include margin-right($value);
+  }
+}
+
+@each $key, $value in $margins {
+  .ml-#{$key} {
+    @include margin-left($value);
+  }
+}
+
+.text-primary { color: $color-primary; }

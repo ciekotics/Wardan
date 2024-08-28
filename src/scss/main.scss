@@ -1,0 +1,24 @@
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/placeholders';
+@import './abstracts/scrollbar';
+@import './abstracts/utils';
+
+@import './base/animations';
+@import './base/base';
+@import './base/reset';
+@import './base/typography';
+@import './base/fonts';
+
+@import './components/buttons';
+@import './components/carousel';
+@import './components/dropdown';
+@import './components/modal';
+@import './components/logo';
+
+@import './layout/footer';
+@import './layout/grid';
+@import './layout/header';
+
+@import './pages/home';
