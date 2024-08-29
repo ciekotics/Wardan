@@ -1,56 +1,31 @@
 import { APIEnpoint } from "@/APIEndpoints";
-// import { DashboardMetrics, ExpenseByCategorySummary, NewProduct, Product, User } from "@/interface";
+import { Blog } from "@/interface";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: APIEnpoint.BackendURL }),
   reducerPath: "api",
-  tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
+  tagTypes: ["Blogs"],
   endpoints: (build) => ({
-    getDashboardMetrics: build.query<any, void>({
+    getDashboardMetrics: build.query<Blog, void>({
       query: () => ({
         url: APIEnpoint.blogs,
         method: "GET"
       }),
-      providesTags: ["DashboardMetrics"],
+      providesTags: ["Blogs"],
     }),
-    // getProducts: build.query<any[], string | void>({
-    //   query: (search) => ({
-    //     url: APIEnpoint.products,
-    //     params: search ? { search } : {},
-    //     method: "GET"
-    //   }),
-    //   providesTags: ["Products"],
-    // }),
-    // createProduct: build.mutation<any, any>({
-    //   query: (newProduct) => ({
-    //     url: APIEnpoint.products,
-    //     method: "POST",
-    //     body: newProduct,
-    //   }),
-    //   invalidatesTags: ["Products"],
-    // }),
-    // getUsers: build.query<any[], void>({
-    //   query: () => ({
-    //     url: APIEnpoint.users,
-    //     method: "GET"
-    //   }),
-    //   providesTags: ["Users"],
-    // }),
-    // getExpensesByCategory: build.query<any[], void>({
-    //   query: () => ({
-    //     url: APIEnpoint.expenses,
-    //     method: "GET"
-    //   }),
-    //   providesTags: ["Expenses"],
-    // }),
+    addBlog: build.mutation<void, Blog>({
+      query: (newBlog) => ({
+        url: APIEnpoint.blogs,
+        method: "POST",
+        body: newBlog,
+      }),
+      invalidatesTags: ["Blogs"],
+    }),
   }),
 });
 
 export const {
   useGetDashboardMetricsQuery,
-  // useGetProductsQuery,
-  // useCreateProductMutation,
-  // useGetUsersQuery,
-  // useGetExpensesByCategoryQuery,
+  useAddBlogMutation,
 } = api;
