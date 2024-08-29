@@ -1,35 +1,42 @@
 "use client";
 
 import { BOTTOMBAR_TABS } from "@/config/constants/navbar-data";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Bottombar = () => {
   const router = useRouter();
+  const location = usePathname();
+
   const [activeTab, setActiveTab] = useState<
     "home" | "about wardan" | "products" | "blogs" | "contact"
   >("home");
 
-  return (
-    <ul className="nav__bottombar">
-      {BOTTOMBAR_TABS.map((item, index) => {
-        return (
-          <li
-            key={index}
-            className={`nav__bottombar-items ${
-              activeTab === item.title ? "active" : ""
-            }`}
-            onClick={() => {
-              setActiveTab(item.title);
-              router.push(`${item.href}`)
-            }}
-          >
-            {item.title.toUpperCase()}
-          </li>
-        );
-      })}
-    </ul>
-  );
+  if (location !== '/blogs') {
+
+    return (
+      <ul className="nav__bottombar">
+        {BOTTOMBAR_TABS.map((item, index) => {
+          return (
+            <li
+              key={index}
+              className={`nav__bottombar-items ${
+                activeTab === item.title ? "active" : ""
+              }`}
+              onClick={() => {
+                setActiveTab(item.title);
+                router.push(`${item.href}`)
+              }}
+            >
+              {item.title.toUpperCase()}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  } else {
+    return null
+  }
 };
 
 export default Bottombar;

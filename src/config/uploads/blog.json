@@ -1,4 +1,14 @@
 {
   "data": [
+    {
+      "title": "New Blog Post",
+      "slug": "new-blog-post",
+      "id": 1
+    },
+    {
+      "title": "New Blog Post",
+      "slug": "new-blog-post",
+      "id": 2
+    }
   ]
 }
