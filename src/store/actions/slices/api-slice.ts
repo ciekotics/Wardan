@@ -7,13 +7,13 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
   endpoints: (build) => ({
-    // getDashboardMetrics: build.query<any, void>({
-    //   query: () => ({
-    //     url: APIEnpoint.dashboard,
-    //     method: "GET"
-    //   }),
-    //   providesTags: ["DashboardMetrics"],
-    // }),
+    getDashboardMetrics: build.query<any, void>({
+      query: () => ({
+        url: APIEnpoint.blogs,
+        method: "GET"
+      }),
+      providesTags: ["DashboardMetrics"],
+    }),
     // getProducts: build.query<any[], string | void>({
     //   query: (search) => ({
     //     url: APIEnpoint.products,
@@ -48,7 +48,7 @@ export const api = createApi({
 });
 
 export const {
-  // useGetDashboardMetricsQuery,
+  useGetDashboardMetricsQuery,
   // useGetProductsQuery,
   // useCreateProductMutation,
   // useGetUsersQuery,
