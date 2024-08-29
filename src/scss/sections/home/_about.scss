@@ -1,0 +1,106 @@
+#about {
+
+  margin-top: 20rem;
+  .container {
+    padding: 0 20rem;
+    display: grid;
+    gap: 120px;
+
+    @media (min-width: 575px) {
+      gap: 80px;
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: 0.7fr 1fr;
+      gap: 30px;
+    }
+  }
+
+  // .about-content {
+  //   @media (min-width: 1400px) {
+  //     padding-inline-end: 90px;
+  //   }
+  // }
+
+  .about-banner {
+    position: relative;
+    // margin-block-end: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__img {
+      text-align: right;
+    }
+
+    .abs-img {
+      position: absolute;
+
+      top: -5rem;
+      right: -5rem;
+
+      &::before {
+        z-index: -1;
+      }
+
+      // &-1 {
+      //   top: 0;
+      //   left: 0;
+      //   width: 150px;
+      //   padding-block: 50px;
+
+      //   @media (min-width: 575px) {
+      //     width: 285px;
+      //   }
+      // }
+    }
+  }
+
+  // .about-banner > .w-100 {
+  //   padding-inline-start: 50px;
+
+  //   @media (min-width: 575px) {
+  //     padding-inline-start: 90px;
+  //   }
+  // }
+
+  // .about .abs-img::before {
+  //   z-index: -1;
+  // }
+
+  // .about .abs-img-1 {
+  //   bottom: -120px;
+  //   left: 0;
+  //   width: 150px;
+  //   padding-block: 50px;
+
+  //   @media (min-width: 575px) {
+  //     width: 285px;
+  //   }
+  // }
+
+  // .about .abs-img-2 {
+  //   top: -65px;
+  //   right: 0;
+  //   overflow: hidden;
+  // }
+
+  // .about .abs-img-1::before {
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 140px;
+  //   background-image: url("../../../../public/images/img-pattern.svg");
+  //   background-repeat: repeat;
+  // }
+
+  // .about .abs-img-2::before {
+  //   inset: 0;
+  //   background-image: url("../../../../public/images/badge-2-bg.png");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   animation: rotate360 15s linear infinite;
+  // }
+}

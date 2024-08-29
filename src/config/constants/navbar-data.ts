@@ -1,19 +1,25 @@
 export const BOTTOMBAR_TABS: {
   title: 'home' | 'about wardan' | 'products' | 'blogs' | 'contact';
+  href: string;
 }[] = [
   {
     title: 'home',
+    href: '/#hero',
   },
   {
-    title: 'about wardan'
+    title: 'about wardan',
+    href: '/#about',
   },
   {
-    title: 'products'
+    title: 'products',
+    href: '/#products',
   },
   {
-    title: 'blogs'
+    title: 'blogs',
+    href: '/#hero',
   },
   {
-    title: 'contact'
+    title: 'contact',
+    href: '/#hero',
   },
 ]
