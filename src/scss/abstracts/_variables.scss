@@ -18,6 +18,11 @@ $color-secondary-shade3: #80b3ff;
 $color-black: #1d1d1d;
 $color-white: #f0f0f0;
 
+$text-high-contrast-rgb-value: 49, 49, 49;
+$detail-medium-contrast: rgb(234, 234, 234);
+$detail-high-contrast: rgb(192, 192, 192);
+$text-body: rgb(54, 49, 61);
+
 // Font Sizes ===============================================
 
 $font-size-xs: 0.8rem; // 8px
@@ -33,6 +38,10 @@ $font-size-3xl: 3.2rem;  // 32px
 $font-size-4xl: 4rem;  // 40px
 $font-size-5xl: 4.8rem;  // 48px
 // ==========================================================
+
+$product-slide-height: 19rem;
+$product-slide-spacing: 1rem;
+$product-slide-size: 100%;
 
 // Font Weights
 $font-extralight: 200;
