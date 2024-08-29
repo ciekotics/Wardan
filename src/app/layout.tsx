@@ -22,9 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
+        {/* NAVBAR */}
         <Navbar />
-        <AppWrapper>{children}</AppWrapper>
+
+        {/* MAIN */}
+        <AppWrapper>
+          {children}
+        </AppWrapper>
+
+        {/* FOOTER */}
         <Footer />
       </body>
     </html>

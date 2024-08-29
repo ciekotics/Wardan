@@ -1,8 +1,11 @@
 
+// CUSTOM COMPONENTS
+import HomePage from "@/components/live/home";
+
 export default function Home() {
   return (
     <main className={`main`}>
-      hey
+      <HomePage />
     </main>
   );
 }

@@ -4,7 +4,7 @@ const OrderOnline = () => {
   return (
     <span className="order-online">
       <p>order online</p>
-      <FaAngleDown />
+      <FaAngleDown className="text-primary" />
     </span>
   );
 };

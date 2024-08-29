@@ -1,7 +1,17 @@
 
+// CUSTOM IMPORTS
+import HeroSection from "./hero"
+import HowItWorksSection from "./how-it-works"
+
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <article id="home" style={{
+      overflow: "hidden"
+    }}>
+      
+      <HeroSection />
+      <HowItWorksSection />
+    </article>
   )
 }
 

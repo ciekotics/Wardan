@@ -1,0 +1,39 @@
+#hiw {
+  min-height: 45vh;
+  @include basePadding;
+
+  text-align: center;
+
+  
+  .hiw {
+    &__items {
+      min-height: 40vh;
+      max-height: fit-content;
+      display: block;
+
+      margin-top: 4rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 1rem 1.5rem;
+
+      flex-wrap: wrap
+    }
+
+    &__item {
+      @include threeBoxes;
+      padding: 3rem;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      padding-top: 5rem;
+
+      gap: 1rem;
+    }
+  }
+}

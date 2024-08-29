@@ -1,11 +1,51 @@
+
 $color-primary: #eb5f3a;
 $color-secondary: #001534;
 
 // PRIMARY SHADES
+$color-primary-extradark: #74210c;
+$color-primary-dark: #B74652;
+$color-primary-medium: #ea562f;
+$color-primary-light: #f3a18b;
+$color-primary-extralight: #f8c7ba;
+
+// SECONDARY SHADES
+$color-secondary-shade1: #003380;
+$color-secondary-shade2: #005de6;
+$color-secondary-shade3: #80b3ff;
 
 // DEFAULT
 $color-black: #1d1d1d;
 $color-white: #f0f0f0;
+
+// Font Sizes ===============================================
+
+$font-size-xs: 0.8rem; // 8px
+$font-size-sm: 1rem; // 10px
+
+$font-size-base: 1.2rem; // === ref (12px)
+
+$font-size-md: 1.6rem;     // 16px
+$font-size-lg: 2rem;  // 20px
+$font-size-xl: 2.4rem;  // 24px
+$font-size-2xl: 2.8rem;  // 28px
+$font-size-3xl: 3.2rem;  // 32px
+$font-size-4xl: 4rem;  // 40px
+$font-size-5xl: 4.8rem;  // 48px
+// ==========================================================
+
+// Font Weights
+$font-extralight: 200;
+$font-light: 400;
+
+$font-normal: 500;
+
+$font-bold: 700;
+$font-extrabold: 900;
+
+// Line Heights
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
 
 $dimensions: (
   5: 0.5rem,
@@ -19,3 +59,4 @@ $margins: (
   10: 1rem,
   12: 1.2rem,
 );
+

@@ -1,0 +1,28 @@
+#hero {
+  margin: 5rem auto;
+  @include basePadding;
+
+  height: 65vh;
+  width: 100vw;
+
+  .item-1,
+  .item-2,
+  .item-3 {
+    height: 100%;
+    width: 100%;
+
+    border: 2px solid rgba($color-primary, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+
+
+    // ============ Ensure the child images can use layout="fill" properly ======== //
+
+    position: relative; 
+    // ============================================================================ //
+  }
+
+  .item-2 img {
+    object-fit: cover; 
+  }
+}

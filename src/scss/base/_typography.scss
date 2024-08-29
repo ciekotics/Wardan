@@ -1,0 +1,94 @@
+
+// Heading Styles
+h1 {
+  font-size: $font-size-3xl;  
+  font-weight: $font-light;
+  color: $color-primary-dark;
+  line-height: $line-height-heading;
+  margin: 0 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 2rem;  
+  font-weight: $font-bold;
+  color: $color-primary-dark;
+  line-height: $line-height-heading;
+  margin: 0 0 0.5rem 0;
+}
+
+h3 {
+  font-size: 1.75rem;  
+  font-weight: $font-bold;
+  color: $color-secondary;
+  line-height: $line-height-heading;
+  margin: 0 0 0.5rem 0;
+}
+
+h4 {
+  font-size: 1.5rem;  
+  font-weight: $font-bold;
+  color: $color-secondary;
+  line-height: $line-height-heading;
+  margin: 0 0 0.5rem 0;
+}
+
+h5 {
+  font-size: 1.25rem;  
+  font-weight: $font-bold;
+  color: $color-secondary;
+  line-height: $line-height-heading;
+  margin: 0 0 0.5rem 0;
+}
+
+h6 {
+  font-size: 1rem;  
+  font-weight: $font-bold;
+  color: $color-secondary;
+  line-height: $line-height-heading;
+  margin: 0 0 0.5rem 0;
+}
+
+p {
+  font-size: $font-size-sm;
+  font-weight: $font-light;
+  color: $color-secondary;
+  
+  // line-height: $line-height-base;
+  // margin: 0 0 1rem 0;
+}
+
+// Inline Text
+i {
+  font-style: italic;
+  color: $color-primary-light;
+}
+
+b, strong {
+  font-weight: $font-bold;
+}
+
+// Links
+a {
+  font-size: $font-size-md;
+  font-weight: $font-bold;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+// Lists
+ul, ol {
+  font-size: $font-size-md;
+  color: $color-secondary;
+  line-height: $line-height-base;
+  margin: 0 0 1rem 0;
+  padding-left: 2rem;
+}
+
+// List Items
+li {
+  margin-bottom: 0.5rem;
+}
