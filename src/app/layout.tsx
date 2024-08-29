@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 
 // CUSTOM IMPORTs
 import { Navbar, Footer } from "@/components/shared";
-import AppWrapper from "@/components/app-wrapper";
+// import AppWrapper from "@/components/app-wrapper";
 
 import "@/scss/main.scss";
 // import "./globals.css";
@@ -23,13 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
+
+        
         {/* NAVBAR */}
         <Navbar />
 
-        {/* MAIN */}
-        <AppWrapper>
-          {children}
-        </AppWrapper>
+        {children}
 
         {/* FOOTER */}
         <Footer />

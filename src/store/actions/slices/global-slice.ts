@@ -3,15 +3,27 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: GlobalSettings = {
   hasHoveredOrderNav: false,
+
+  hasHoveredOrderNavModal: false,
 };
 
 export const globalSlice = createSlice({
   name: "global",
   initialState,
   reducers: {
+    setHasHoveredOrderNav: (state) => {
+      state.hasHoveredOrderNav = true
+      state.hasHoveredOrderNavModal = true
+    },
+    resetHasHoveredOrderNav: (state) => {
+      state.hasHoveredOrderNav = false
+    },
+    resetHasHoveredOrderNavModal: (state) => {
+      state.hasHoveredOrderNavModal = false
+    },
   },
 });
 
-export const {} = globalSlice.actions;
+export const { setHasHoveredOrderNav, resetHasHoveredOrderNav, resetHasHoveredOrderNavModal } = globalSlice.actions;
 
 export default globalSlice.reducer;

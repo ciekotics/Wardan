@@ -6,7 +6,7 @@ import React from "react";
 // CUSTOM IMPORTS
 import StoreProvider from "@/store";
 
-const AppLayout = ({ children }: { children: React.ReactNode }) => {
+const ReduxLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
       <React.Fragment
@@ -16,12 +16,10 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const AppWrapper = ({ children }: { children: React.ReactNode }) => {
+export const ReduxWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <StoreProvider>
-      <AppLayout>{children}</AppLayout>
+      <ReduxLayout>{children}</ReduxLayout>
     </StoreProvider>
   );
 };
-
-export default AppWrapper;

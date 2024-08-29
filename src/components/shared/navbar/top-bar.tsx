@@ -1,4 +1,3 @@
-
 // ICONS
 import { FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
@@ -8,6 +7,7 @@ import { PiLineVerticalLight } from "react-icons/pi";
 import Pincode from "./pincode";
 import OrderOnline from "./order-online";
 import SearchProduct from "./search-product";
+import { ReduxWrapper } from "@/components/redux-wrapper";
 
 const Topbar = () => {
   return (
@@ -22,7 +22,9 @@ const Topbar = () => {
         style={{ color: "#00000035" }}
       />
 
-      <OrderOnline />
+      <ReduxWrapper>
+        <OrderOnline />
+      </ReduxWrapper>
 
       <SearchProduct />
     </div>
