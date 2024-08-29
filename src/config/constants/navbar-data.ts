@@ -4,7 +4,7 @@ export const BOTTOMBAR_TABS: {
 }[] = [
   {
     title: 'home',
-    href: '/#hero',
+    href: '/#top-main',
   },
   {
     title: 'about wardan',
@@ -15,11 +15,11 @@ export const BOTTOMBAR_TABS: {
     href: '/#products',
   },
   {
-    title: 'blogs',
-    href: '/#hero',
+    title: 'contact',
+    href: '/#top-main',
   },
   {
-    title: 'contact',
-    href: '/#hero',
+    title: 'blogs',
+    href: '/blogs',
   },
 ]
