@@ -1,5 +1,4 @@
 #header {
-
   position: sticky;
   top: 0;
   left: 0;
@@ -58,10 +57,10 @@
           box-shadow: none;
 
           font-size: 1.2rem;
-          
+
           caret-color: $color-primary;
           background-color: transparent;
-          
+
           &::placeholder {
             color: #0000003f;
           }
@@ -84,7 +83,6 @@
           align-items: center;
           justify-content: center;
         }
-
       }
 
       .search-icon {
@@ -141,6 +139,26 @@
       }
       .active {
         border-bottom: 3px solid $color-primary;
+      }
+
+      &--admin {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        gap: 1rem;
+
+        .item {
+          display: flex;
+          align-items: center;
+
+          gap: 1rem;
+
+          border: 1px solid rgba($color-black, 0.2);
+          padding: 0.5rem;
+
+          border-radius: 1rem;
+          cursor: pointer;
+        }
       }
     }
   }
