@@ -1,7 +1,7 @@
 
 const OurStrengths = () => {
   return (
-    <div>OurStrengths</div>
+    <div className="strengths">OurStrengths</div>
   )
 }
 

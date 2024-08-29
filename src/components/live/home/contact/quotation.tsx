@@ -1,7 +1,7 @@
 
 const Quotation = () => {
   return (
-    <div>Quotation</div>
+    <div className="quotation">Quotation</div>
   )
 }
 
