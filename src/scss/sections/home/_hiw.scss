@@ -3,7 +3,10 @@
   @include basePadding;
 
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
+  padding-top: 5rem;
+
+  border-top: 1px solid rgba($color-black, 0.1);
   
   .hiw {
     &__items {

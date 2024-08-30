@@ -30,8 +30,10 @@
 
 .text-primary { color: $color-primary; }
 .hidden { display: none; }
+.inline-block { display: inline-block; }
 .w-full { width: 100% !important; }
 .h-full { height: 100% !important; }
 .flex { display: flex; }
 .items-center { align-items: center !important; }
 .justify-center { justify-content: center !important; }
+.cursor-pointer { cursor: pointer; }
