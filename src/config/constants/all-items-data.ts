@@ -1,8 +1,8 @@
-import menu1 from "/images/menu-1.png";
-import menu2 from "/images/menu-2.png";
-import menu3 from "/images/menu-3.png";
-import menu4 from "/images/menu-4.png";
-import menu5 from "/images/menu-5.png";
+import menu1 from "../../../public/images/products-noBg/menu-1.png";
+import menu2 from "../../../public/images/products-noBg/menu-2.png";
+import menu3 from "../../../public/images/products-noBg/menu-3.png";
+import menu4 from "../../../public/images/products-noBg/menu-4.png";
+import menu5 from "../../../public/images/products-noBg/menu-5.png";
 
 export const ALL_ITEMS_DATA = [
   {

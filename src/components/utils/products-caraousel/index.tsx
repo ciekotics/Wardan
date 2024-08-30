@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
 
 // CUSTOM IMPORTS
-import { BANNER_SLIDES } from "@/config/constants/banner-slides-data";
-import Image from "next/image";
+import { ALL_ITEMS_DATA } from "@/config/constants/all-items-data";
 
 const ProductsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalItems = BANNER_SLIDES.length;
+  const totalItems = ALL_ITEMS_DATA.length;
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
@@ -24,17 +25,17 @@ const ProductsCarousel = () => {
         className="carousel-inner"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {BANNER_SLIDES.map((partner, index) => (
+        {ALL_ITEMS_DATA.map((partner, index) => (
           <div key={index} className="carousel-item">
-            <Image src={partner.image} alt={partner.title} />
+            <Image src={partner.imageSrc} alt={partner.title} />
           </div>
         ))}
       </div>
       <button className="carousel-control prev" onClick={prevSlide}>
-        &lt;
+        <FaArrowLeft color="white" />
       </button>
       <button className="carousel-control next" onClick={nextSlide}>
-        &gt;
+        <FaArrowRight color="white" />
       </button>
     </div>
   );
