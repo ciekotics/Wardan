@@ -63,3 +63,40 @@
     }
   }
 }
+
+/* 
+
+menu-card (all-items)
+*/
+
+.grid-list {
+  display: grid;
+  gap: 4rem;
+
+  margin-block-end: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: 992px) {
+
+    position: relative;
+    column-gap: 9rem;
+
+    &::before {
+
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      height: 100%;
+      border-inline-start: 0.1rem solid hsla(0, 0%, 100%, 0.2);
+    }
+  }
+
+  @media (min-width: 1200px) {
+
+    gap: 2rem 20rem;
+    margin-block-end: 5.5rem;
+  }
+}
