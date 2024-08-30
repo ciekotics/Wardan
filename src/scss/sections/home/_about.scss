@@ -92,11 +92,15 @@
         // overflow: hidden;
         position: relative;
 
+        border-radius: 1.5rem;
+
         video {
           object-fit: cover;
           object-position: center;
           height: 100%;
           cursor: pointer;
+
+          border-radius: 1.5rem;
         }
 
         .play-icon {
@@ -112,6 +116,10 @@
           justify-content: center;
 
           background-color: $color-black-shade1;
+
+          border: 1rem solid rgba($color-primary-light, 0.5);
+          border-radius: 2rem;
+          
         }
 
         &::before {
@@ -124,6 +132,8 @@
           height:45vh;
           width: 50%;
           z-index: -1;
+
+          border-radius: 2rem;
         }
       }
 

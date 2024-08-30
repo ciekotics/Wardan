@@ -10,7 +10,7 @@ const Navbar = () => {
     <header id="header">
       <Link href={"/"}>
         <Image
-          src={"/images/logo.svg"}
+          src={"/images/logo_1.svg"}
           alt="wardan-app-logo"
           width={150}
           height={120}

@@ -23,7 +23,7 @@ const SliderContent = ({ currentIndex }: { currentIndex: number }) => {
         animate="visible"
         transition={{ ...transitionSettings, delay: 1 }}
       >
-        {BANNER_SLIDES[currentIndex].subtitle}
+        {BANNER_SLIDES[currentIndex].subtitle.toUpperCase()}
       </motion.div>
       <motion.div
         className="separator"

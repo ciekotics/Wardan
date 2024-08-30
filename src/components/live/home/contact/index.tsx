@@ -1,7 +1,7 @@
 
 // CUSTOM IMPORTS
 import ContactCard from "./contact-card"
-import OurStrengths from "./our-strengths"
+import SubscribeUs from "./subscribe-us"
 import Quotation from "./quotation"
 
 const ContactSection = () => {
@@ -9,7 +9,7 @@ const ContactSection = () => {
     <section id="contact">
       <Quotation />
       <ContactCard />
-      <OurStrengths />
+      <SubscribeUs />
     </section>
   )
 }
