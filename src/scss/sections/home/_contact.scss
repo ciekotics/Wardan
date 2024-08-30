@@ -9,7 +9,7 @@
 
     text-align: center;
 
-    padding: 5rem 30rem;
+    padding: 8rem 30rem;
 
     &::before {
       content: "";
@@ -51,7 +51,7 @@
       height: 50%;
 
       p {
-        font-size: $font-size-5xl;
+        font-size: $font-size-3xl;
 
         color: $color-white;
       }
@@ -62,7 +62,7 @@
 
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-end;
       }
 
       .right-quote {
@@ -71,7 +71,7 @@
 
         display: flex;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
   }
