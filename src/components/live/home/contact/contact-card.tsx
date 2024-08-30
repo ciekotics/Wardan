@@ -31,7 +31,14 @@ const ContactCard = () => {
       </div>
       <div className="contact-card__right">
         <h3>Contact Us</h3>
-        <Separator />
+
+        <div
+          style={{
+            opacity: 0.5,
+          }}
+        >
+          <Separator />
+        </div>
 
         <div className="mail">
           <h3>Mail Us :</h3>

@@ -59,7 +59,11 @@ const AboutUsDetails = () => {
           <h2 className="label" id="about-label">
             About Us
           </h2>
+          <div style={{
+            opacity: 0.5
+          }}>
           <Separator />
+          </div>
           <h3 className="headline">
             Elevating Culinary Creations with the Finest Spices
           </h3>

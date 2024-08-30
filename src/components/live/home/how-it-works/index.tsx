@@ -6,7 +6,13 @@ const HowItWorksSection = () => {
   return (
     <section id="hiw">
       <h2>Discover the Best and Authentic Spices from Wardan</h2>
-      <Separator />
+      <div
+        style={{
+          opacity: 0.5,
+        }}
+      >
+        <Separator />
+      </div>
 
       <div className="hiw__items">
         {STRENGTHS_DATA.map((item, index) => {
