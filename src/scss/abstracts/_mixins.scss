@@ -74,6 +74,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
   margin-left: $value;
 }
 
+@mixin margin-top($value) {
+  margin-top: $value;
+}
+
 @mixin height($value) {
   height: $value;
 }

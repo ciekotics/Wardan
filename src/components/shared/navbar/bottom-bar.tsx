@@ -40,7 +40,7 @@ const Bottombar = () => {
     return (
       <div className={"nav__bottombar--admin"}>
         <Link
-          className="item"
+          className="item dashboard"
           href='/admin'
           target='_blank'
           rel='noreferrer noopener'

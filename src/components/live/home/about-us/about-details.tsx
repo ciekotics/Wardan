@@ -55,9 +55,9 @@ const AboutUsDetails = () => {
     <div>
       <div className="container">
         <div className="about-content mt-20">
-          <h1 className="" id="about-label">
+          <h2 className="" id="about-label">
             About Us
-          </h1>
+          </h2>
           <Separator />
           <h3
             className=" mt-10"

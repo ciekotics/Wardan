@@ -10,7 +10,7 @@ h1 {
 
 h2 {
   font-size: 2rem;  
-  font-weight: $font-bold;
+  font-weight: $font-normal;
   color: $color-primary-dark;
   line-height: $line-height-heading;
   margin: 0 0 0.5rem 0;
@@ -18,7 +18,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;  
-  font-weight: $font-bold;
+  font-weight: $font-light;
   color: $color-secondary;
   line-height: $line-height-heading;
   margin: 0 0 0.5rem 0;
@@ -34,7 +34,7 @@ h4 {
 
 h5 {
   font-size: 1.25rem;  
-  font-weight: $font-bold;
+  font-weight: $font-light;
   color: $color-secondary;
   line-height: $line-height-heading;
   margin: 0 0 0.5rem 0;
@@ -69,14 +69,12 @@ b, strong {
 
 // Links
 a {
-  font-size: $font-size-md;
-  font-weight: $font-bold;
-  color: $color-primary;
+  font-size: $font-size-base;
   text-decoration: none;
 
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
+  // &:hover, &:focus {
+  //   text-decoration: underline;
+  // }
 }
 
 // Lists

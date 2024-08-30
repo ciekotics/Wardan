@@ -17,6 +17,12 @@
 }
 
 @each $key, $value in $margins {
+  .mt-#{$key} {
+    @include margin-top($value);
+  }
+}
+
+@each $key, $value in $margins {
   .ml-#{$key} {
     @include margin-left($value);
   }
@@ -24,3 +30,8 @@
 
 .text-primary { color: $color-primary; }
 .hidden { display: none; }
+.w-full { width: 100% !important; }
+.h-full { height: 100% !important; }
+.flex { display: flex; }
+.items-center { align-items: center !important; }
+.justify-center { justify-content: center !important; }

@@ -1,6 +1,6 @@
-import slider1 from '../../../public/images/hero-slider-1.jpg'
-import slider2 from '../../../public/images/hero-slider-2.jpg'
-import slider3 from '../../../public/images/hero-slider-3.jpg'
+import slider1 from '../../../public/images/hero-slider-images/hero-slider-1.jpg'
+import slider2 from '../../../public/images/hero-slider-images/hero-slider-2.jpg'
+import slider3 from '../../../public/images/hero-slider-images/hero-slider-3.jpg'
 
 // Slide data
 export const BANNER_SLIDES = [

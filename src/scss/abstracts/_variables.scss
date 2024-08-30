@@ -1,22 +1,32 @@
 
-$color-primary: #eb5f3a;
-$color-secondary: #001534;
+$color-primary: #B74652;
+$color-secondary: #071211;
 
 // PRIMARY SHADES
-$color-primary-extradark: #74210c;
-$color-primary-dark: #B74652;
-$color-primary-medium: #ea562f;
-$color-primary-light: #f3a18b;
-$color-primary-extralight: #f8c7ba;
+$color-primary-extradark: #5c2329;
+$color-primary-dark: #81313a;
+$color-primary-medium: #bf5964;
+$color-primary-light: #ce7e86;
+$color-primary-extralight: #eac8cb;
 
 // SECONDARY SHADES
-$color-secondary-shade1: #003380;
-$color-secondary-shade2: #005de6;
-$color-secondary-shade3: #80b3ff;
+$color-secondary-shade1: #153734;
+$color-secondary-shade2: #235c56;
+$color-secondary-shade3: #318179;
+$color-secondary-shade3: #59bfb5;
+$color-secondary-shade3: #a3dcd6;
+$color-secondary-shade3: #c8eae6;
 
 // DEFAULT
 $color-black: #1d1d1d;
 $color-white: #f0f0f0;
+
+// BLACK SHADES
+$color-black-shade1: #262626;
+$color-black-shade2: #595959;
+$color-black-shade3: #a6a6a6;
+// WHITE SHADES
+$color-white-shade1: #d9d9d9;
 
 $text-high-contrast-rgb-value: 49, 49, 49;
 $detail-medium-contrast: rgb(234, 234, 234);
@@ -67,5 +77,7 @@ $margins: (
   5: 0.5rem,
   10: 1rem,
   12: 1.2rem,
+  20: 2rem,
+  50: 5rem,
 );
 

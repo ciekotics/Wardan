@@ -153,11 +153,18 @@
 
           gap: 1rem;
 
+          color: $color-black;
+          font-size: $font-size-base;
           border: 1px solid rgba($color-black, 0.2);
-          padding: 0.5rem;
+          padding: 1rem 2.5rem;
 
           border-radius: 1rem;
           cursor: pointer;
+        }
+
+        .dashboard {
+          color: $color-white;
+          background-color: $color-primary;
         }
       }
     }

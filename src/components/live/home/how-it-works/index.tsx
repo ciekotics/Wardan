@@ -5,7 +5,7 @@ import React from "react";
 const HowItWorksSection = () => {
   return (
     <section id="hiw">
-      <h1>Discover the Best and Authentic Spices from Wardan</h1>
+      <h2>Discover the Best and Authentic Spices from Wardan</h2>
       <Separator />
 
       <div className="hiw__items">
