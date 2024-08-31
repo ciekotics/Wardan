@@ -1,14 +1,9 @@
-import { ReduxWrapper } from "@/components/redux-wrapper"
-import BlogHome from "./home"
+import BlogHome from "./home";
+import AllBlogs from "./all-blogs";
+import BlogPost from "./blog-post";
 
-const BlogPage = () => {
-  return (
-    <article>
-      <ReduxWrapper>
-        <BlogHome />
-      </ReduxWrapper>
-    </article>
-  )
+export {
+  BlogHome,
+  AllBlogs,
+  BlogPost,
 }
-
-export default BlogPage
