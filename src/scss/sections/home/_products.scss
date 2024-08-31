@@ -1,5 +1,3 @@
-// styles.scss
-
 #products {
   width: 100vw;
   height: 85vh;
@@ -35,25 +33,81 @@
       display: flex;
       flex-direction: row;
       transition: transform 0.5s ease-in-out;
+      width: 100%;
 
       .carousel-item {
-        flex: 0 0 auto;
-        width: 100%;
+        flex: 0 0 100%; // Ensure each item takes up the full width of the carousel
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        img {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: cover;
+        .content {
+          width: 65%;
+          height: 75%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &__left {
+            width: 35%;
+            height: 100%;
+            perspective: 150rem;
+            position: relative;
+          
+            &-side {
+              height: 100%;
+              transition: transform 0.8s ease;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              backface-visibility: hidden;
+              border-radius: 3px;
+              overflow: hidden;
+          
+              &--front {
+                transform: rotateY(0deg); // Ensure initial state is front-facing
+                background-color: transparent;
+                border: none;
+              }
+          
+              &--back {
+                transform: rotateY(180deg); // Ensure initial state is back-facing
+                background-color: transparent;
+                border: none;
+              }
+          
+              img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+              }
+            }
+          
+            // Apply hover effect to flip the card
+            &:hover {
+              .content__left-side--front {
+                transform: rotateY(-180deg);
+              }
+          
+              .content__left-side--back {
+                transform: rotateY(0deg);
+              }
+            }
+          }
+          
+
+          &__right {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+          }
         }
       }
-    }
-
-    &:hover .carousel-control {
-      background: rgba($color-primary, 1);
     }
 
     .carousel-control {
@@ -85,6 +139,10 @@
       &.next {
         right: 20rem;
       }
+    }
+
+    &:hover .carousel-control {
+      background: $color-primary;
     }
   }
 }
