@@ -5,6 +5,9 @@ const initialState: GlobalSettings = {
   hasHoveredOrderNav: false,
 
   hasHoveredOrderNavModal: false,
+
+  blogsLimit: 12,
+  blogsOffset: 0,
 };
 
 export const globalSlice = createSlice({
