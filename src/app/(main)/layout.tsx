@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 // CUSTOM IMPORTs
-import { Navbar, Footer } from "@/components/shared";
+import { Navbar, Footer } from "@/components/layout";
 // import AppWrapper from "@/components/app-wrapper";
 
 import "@/scss/main.scss";

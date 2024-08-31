@@ -1,6 +1,6 @@
 
 // CUSTOM IMPORTS
-import Separator from "@/components/utils/separator";
+import Separator from "@/components/shared/separator";
 import Products from "./products";
 
 const AllItemsSection = () => {

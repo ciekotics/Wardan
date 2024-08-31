@@ -1,6 +1,6 @@
 
 // CUSTOM IMPORTS
-import ProductsCarousel from "@/components/utils/products-caraousel";
+import ProductsCarousel from "@/components/shared/products-caraousel";
 
 const ProductsSection = () => {
   return (

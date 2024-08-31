@@ -1,4 +1,4 @@
-import Separator from "@/components/utils/separator";
+import Separator from "@/components/shared/separator";
 import { OUR_PARTNERS } from "@/config/constants/partners-data";
 import Image from "next/image";
 

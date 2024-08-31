@@ -12,7 +12,7 @@ import blogs from "@/config/uploads/blog.json";
 import { Blog } from "@/interface";
 // =================
 
-const filePath = path.join(process.cwd(), "src/config/uploads/blog.json");
+const filePath = path.join(process.cwd(), "src/config/blogs/db.json");
 
 export async function GET() {
   return NextResponse.json({ blogs: blogs.data });

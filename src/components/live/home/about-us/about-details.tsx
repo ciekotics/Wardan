@@ -1,6 +1,6 @@
 "use client";
 
-import Separator from "@/components/utils/separator";
+import Separator from "@/components/shared/separator";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaRegPlayCircle } from "react-icons/fa";

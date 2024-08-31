@@ -15,7 +15,7 @@ const Bottombar = () => {
     "home" | "about wardan" | "products" | "blogs" | "contact"
   >("home");
 
-  if (location !== "/blogs") {
+  if (location.split("/").includes("/blogs")) {
     return (
       <ul className="nav__bottombar">
         {BOTTOMBAR_TABS.map((item, index) => {

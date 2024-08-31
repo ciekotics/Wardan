@@ -1,4 +1,4 @@
-import Separator from "@/components/utils/separator";
+import Separator from "@/components/shared/separator";
 import { STRENGTHS_DATA } from "@/config/constants/strengths-data";
 import React from "react";
 

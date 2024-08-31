@@ -44,3 +44,23 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+.wardan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row !important;
+
+  border: none !important;
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+
+  gap: 1rem;
+  background-color: $color-black;
+  color: $color-white;
+  
+  p {
+    font-size: $font-size-base;
+    color: $color-white;
+  }
+}
