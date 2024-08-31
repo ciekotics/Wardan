@@ -7,7 +7,7 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["Blogs"],
   endpoints: (build) => ({
-    getDashboardMetrics: build.query<Blog[], void>({
+    getDashboardMetrics: build.query<{blogs: Blog[]}, void>({
       query: () => ({
         url: APIEnpoint.blogs,
         method: "GET"

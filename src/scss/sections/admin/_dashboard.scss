@@ -1,4 +1,89 @@
 .dashboard {
   flex: 1 1 0%;
   width: 100%;
+
+  padding: 3.5rem 0;
+
+  .blogs-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+
+    .blogs {
+      width: 100%;
+      flex: 1 1 0%;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      .all-blogs {
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem 0.5rem;
+
+        padding: 2rem 0;
+
+        &__item {
+          width: 95%;
+          height: 100%;
+          border: 0.5rem solid rgba($color-black, 0.05);
+
+          position: relative;
+
+          border-radius: 1rem;
+
+          .btns {
+            position: absolute;
+            top: -1rem;
+            right: -1rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .edit,
+            .delete {
+              background-color: $color-white;
+              border-radius: 50%;
+              z-index: 1000;
+              padding: 1rem;
+
+              color: $color-black;
+              background-color: $color-white;
+
+              border: 1px solid rgba($color-black, 0.1);
+              cursor: pointer;
+            }
+
+            .edit:hover {
+              color: $color-white;
+              background-color: $color-black;
+            }
+
+            .delete:hover {
+              color: $color-white;
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      width: 100%;
+      height: 5%;
+    }
+
+  }
 }
