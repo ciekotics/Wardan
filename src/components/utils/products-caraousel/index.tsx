@@ -27,7 +27,19 @@ const ProductsCarousel = () => {
       >
         {ALL_ITEMS_DATA.map((partner, index) => (
           <div key={index} className="carousel-item">
-            <Image src={partner.imageSrc} alt={partner.title} />
+            <div className="content">
+              <div className="content__left">
+                <div className="content__left-side content__left-side--front">
+                  <Image src={partner.imageSrc} alt={partner.title} priority />
+                </div>
+
+                <div className="content__left-side content__left-side--back">
+                  <Image src={partner.backImageSrc} alt={partner.title} priority />
+                </div>
+              </div>
+
+              <div className="content__right">hey</div>
+            </div>
           </div>
         ))}
       </div>

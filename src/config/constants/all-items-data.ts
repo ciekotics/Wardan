@@ -1,12 +1,10 @@
-import menu1 from "../../../public/images/products-noBg/menu-1.png";
-import menu2 from "../../../public/images/products-noBg/menu-2.png";
-import menu3 from "../../../public/images/products-noBg/menu-3.png";
-import menu4 from "../../../public/images/products-noBg/menu-4.png";
-import menu5 from "../../../public/images/products-noBg/menu-5.png";
+// IMAGES
+import { dhaniyaBack, dhaniyaFront, garamMasalaBack, garamMasalaFront, lalMirchBack, lalMirchFront, haldiBack, haldiFront, jeeraBack, jeeraFront } from "../../../public/images/products/both-sides";
 
 export const ALL_ITEMS_DATA = [
   {
-    imageSrc: menu1,
+    imageSrc: dhaniyaFront,
+    backImageSrc: dhaniyaBack,
     title: "Jeera",
     // price: "$25.50",
     description:
@@ -14,7 +12,8 @@ export const ALL_ITEMS_DATA = [
     altText: "Greek Salad",
   },
   {
-    imageSrc: menu2,
+    imageSrc: garamMasalaFront,
+    backImageSrc: garamMasalaBack,
     title: "Dhaniya",
     // price: "$40.00",
     description:
@@ -22,24 +21,27 @@ export const ALL_ITEMS_DATA = [
     altText: "Lasagne",
   },
   {
-    imageSrc: menu3,
+    imageSrc: lalMirchFront,
     title: "Lal Mirch",
+    backImageSrc: lalMirchBack,
     // price: "$10.00",
     description:
       "Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.",
     altText: "Butternut Pumpkin",
   },
   {
-    imageSrc: menu4,
+    imageSrc: haldiFront,
     title: "Haldi",
+    backImageSrc: haldiBack,
     // price: "$10.00",
     description:
       "Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.",
     altText: "Butternut Pumpkin",
   },
   {
-    imageSrc: menu5,
+    imageSrc: jeeraFront,
     title: "Garam Masala",
+    backImageSrc: jeeraBack,
     // price: "$10.00",
     description:
       "Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.",
