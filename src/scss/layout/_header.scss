@@ -192,4 +192,13 @@
 
     color: $color-primary;
   }
+
+  .btns {
+
+    display: flex;
+    align-items: center;
+    flex-direction: flex-end;
+    justify-content: center;
+    gap: 1rem;
+  }
 }

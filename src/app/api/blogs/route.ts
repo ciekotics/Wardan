@@ -8,11 +8,11 @@ import path from "path";
 import { NextResponse, NextRequest } from "next/server";
 
 // ==== DATA =======
-import blogs from "@/config/uploads/blog.json";
+import blogs from "@/config/___persist___/blogs/db.json";
 import { Blog } from "@/interface";
 // =================
 
-const filePath = path.join(process.cwd(), "src/config/blogs/db.json");
+const filePath = path.join(process.cwd(), "src/config/___persist___/blogs/db.json");
 
 export async function GET() {
   return NextResponse.json({ blogs: blogs.data });

@@ -64,3 +64,23 @@
     color: $color-white;
   }
 }
+
+.wardan-btn-ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row !important;
+
+  border: 0.1rem solid rgba($color-black, 0.5) !important;
+  padding: 0.9rem 3rem;
+  border-radius: 0.5rem;
+
+  gap: 1rem;
+  background-color: $color-white;
+  color: $color-black;
+
+  p {
+    font-size: $font-size-base;
+    color: $color-black;
+  }
+}
