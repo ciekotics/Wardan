@@ -161,7 +161,7 @@ const NewBlogLayout = () => {
       hasSmallParagraph && data?.smallParagraph !== undefined && formData.append('small-paragraph', data.smallParagraph);
       formData.append('banner', JSON.stringify(imageFile));
 
-      const res: any = await addBlog(formData);
+      const res: any = await addBlog(formData).unwrap();
 
       console.log(res)
 
