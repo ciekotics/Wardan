@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaPlus, FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
+import NewBlogButton from "./new-blog-button";
 
 const AdminNavbar = () => {
   return (
@@ -11,10 +12,7 @@ const AdminNavbar = () => {
           <FaPlay />
           <p>Live</p>
         </Link>
-        <Link href={"/admin/add-blog"} className="wardan-btn">
-          <FaPlus />
-          <p>New Blog</p>
-        </Link>
+        <NewBlogButton />
       </div>
     </header>
   );

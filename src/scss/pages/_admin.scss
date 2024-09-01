@@ -22,4 +22,51 @@
   min-height: 100vh;
 
   padding: 10rem 20rem;
+  
+  form {
+    width: 100%;
+    height: 75vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+  }
+
+  button[type="submit"] {
+    
+    all: unset;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+
+    width: 100%;
+    height: 3.5rem;
+
+    background-color: $color-primary-dark;
+
+    text-align: center;
+    font-size: $font-size-md;
+    color: $color-white;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($color-primary, 1);
+    }
+  }
+
+  .heading {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .not-allowed {
+      color: $color-primary;
+    }
+
+    .allowed {
+      color: $color-black;
+    }
+  }
 }

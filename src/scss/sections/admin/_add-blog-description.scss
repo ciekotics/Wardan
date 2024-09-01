@@ -1,0 +1,21 @@
+.blog-add-description,
+.small-paragraph,
+.long-paragraph {
+  margin-top: 1.5rem;
+
+}
+
+.blog-add-description {
+
+  @include textarea(100%, 100%, 10vh, 15vh);
+}
+
+.small-paragraph {
+
+  @include textarea(100%, 100%, 15vh, 20vh);
+}
+
+.long-paragraph {
+
+  @include textarea(100%, 100%, 25vh, 30vh);
+}

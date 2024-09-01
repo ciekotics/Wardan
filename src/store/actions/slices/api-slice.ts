@@ -7,18 +7,19 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["Blogs"],
   endpoints: (build) => ({
-    getDashboardMetrics: build.query<{blogs: Blog[]}, void>({
+    getDashboardMetrics: build.query<{ blogs: Blog[] }, void>({
       query: () => ({
         url: APIEnpoint.blogs,
-        method: "GET"
+        method: "GET",
       }),
       providesTags: ["Blogs"],
     }),
-    addBlog: build.mutation<void, Blog>({
-      query: (newBlog) => ({
+    addBlog: build.mutation<void, FormData>({
+      query: (formData) => ({
         url: APIEnpoint.blogs,
         method: "POST",
-        body: newBlog,
+        body: formData,
+        formData: true,
       }),
       invalidatesTags: ["Blogs"],
     }),

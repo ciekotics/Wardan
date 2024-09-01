@@ -2,7 +2,7 @@ import AddBlog from "@/components/admin/add-blog";
 
 export default function AddBlogPage() {
   return (
-    <main>
+    <main id="add-blog">
       <AddBlog />
     </main>
   )

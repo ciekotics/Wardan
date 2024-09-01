@@ -78,6 +78,7 @@ export async function POST(request: NextRequest) {
       });
     });
 
+    console.log(parsedForm)
     const { fields, files } = parsedForm;
 
     // Utility function to safely extract string fields

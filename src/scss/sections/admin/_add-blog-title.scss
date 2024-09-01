@@ -1,0 +1,11 @@
+.blog-add-title {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: flex-start;
+  justify-content: center;
+
+  .input {
+    @include input(100%, 5vh);
+  }
+}

@@ -30,6 +30,9 @@
 // ADMIN
 @import './sections/admin/topbar';
 @import './sections/admin/dashboard';
+@import './sections/admin/add-blog-title';
+@import './sections/admin/add-blog-description';
+@import './sections/admin/add-blog-banner';
 
 @import './pages/home';
 @import './pages/admin';
