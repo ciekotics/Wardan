@@ -43,18 +43,20 @@ export async function GET(request: NextRequest) {
   let filteredBlogs = blogs.data;
 
   // Fetch by ID
-  if (id) {
-    filteredBlogs = filteredBlogs.filter(blog => blog.id === parseInt(id));
-  } else {
-    // Search by title
-    if (search) {
-      filteredBlogs = filteredBlogs.filter(blog =>
-        blog.title.toLowerCase().includes(search.toLowerCase())
-      );
-    }
+  if (blogs.data.length > 0) {
+    if (id) {
+      filteredBlogs = filteredBlogs.filter((blog: Blog) => blog.id === parseInt(id));
+    } else {
+      // Search by title
+      if (search) {
+        filteredBlogs = filteredBlogs.filter((blog: Blog) =>
+          blog.title.toLowerCase().includes(search.toLowerCase())
+        );
+      }
 
-    // Apply offset and limit
-    filteredBlogs = filteredBlogs.slice(offset, offset + limit);
+      // Apply offset and limit
+      filteredBlogs = filteredBlogs.slice(offset, offset + limit);
+    }
   }
 
   // Return the filtered blog posts and the total count
@@ -95,7 +97,7 @@ export async function POST(request: NextRequest) {
 
     let bannerFile: File;
     if (Array.isArray(files.banner)) {
-      bannerFile = files.banner[0]; 
+      bannerFile = files.banner[0];
     } else {
       bannerFile = files.banner as File;
     }
