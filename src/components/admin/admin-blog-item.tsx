@@ -1,15 +1,16 @@
-import React from "react";
+
 import { ImCross } from "react-icons/im";
 import { MdModeEditOutline } from "react-icons/md";
 import Image from "next/image";
 import { Blog } from "@/interface";
 import { useDeleteBlogMutation } from "@/store/actions/slices/api-slice";
+import { useRouter } from "next/navigation";
 
 const AdminBlogItem = ({ item }: { item: Blog }) => {
-  // In your component or wherever you are using the hook
+  
+  const router = useRouter();
   const [deleteBlog] = useDeleteBlogMutation();
 
-  // Use deleteBlog to call the mutation
   const handleDelete = async () => {
     try {
       const response = await deleteBlog({ id: item.id }).unwrap();
@@ -19,13 +20,17 @@ const AdminBlogItem = ({ item }: { item: Blog }) => {
     }
   };
 
+  const handleEdit = () => {
+    router.push(`/admin/edit-blog/${item.id}`)
+  }
+
   return (
     <div className="all-blogs__item">
       {/* {item.title} */}
 
       <div className="btns">
         <div className="edit">
-          <MdModeEditOutline size={25} />
+          <MdModeEditOutline size={25} onClick={handleEdit} />
         </div>
         <div className="delete" onClick={handleDelete}>
           <ImCross size={25} />

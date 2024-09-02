@@ -9,6 +9,10 @@ const AdminAllBlogs = ({ search }: { search: string }) => {
 
   const allBlogsQuery = useGetAllBlogsQuery({
     search
+  }, {
+    refetchOnMountOrArgChange: true,
+    refetchOnFocus: true,
+    refetchOnReconnect: true,
   });
 
   const allBlogs = allBlogsQuery.data;

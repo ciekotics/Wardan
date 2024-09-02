@@ -32,6 +32,29 @@ export const api = createApi({
       },
       providesTags: ["Blogs"],
     }),
+    getBlog: build.query<{ blogs: Blog[] }, {
+      id: number
+    }>({
+      query: (params) => {
+        const customParams = { ...params }
+        Object.keys(customParams).forEach((key) => {
+          if (
+            customParams[key as keyof object] === null ||
+            customParams[key as keyof object] === undefined ||
+            customParams[key as keyof object] === '' ||
+            customParams[key as keyof object] === '[]'
+          ) {
+            delete customParams[key as keyof object]
+          }
+        })
+        return {
+          url: APIEnpoint.blogs,
+          method: "GET",
+          params: customParams,
+        }
+      },
+      // providesTags: ["Blogs"],
+    }),
     addBlog: build.mutation<{
       message: string
       submit: boolean
@@ -39,6 +62,18 @@ export const api = createApi({
       query: (formData) => ({
         url: APIEnpoint.blogs,
         method: "POST",
+        body: formData,
+        formData: true,
+      }),
+      invalidatesTags: ["Blogs"],
+    }),
+    editBlog: build.mutation<{
+      message: string
+      submit: boolean
+    }, FormData>({
+      query: (formData) => ({
+        url: APIEnpoint.blogs,
+        method: "PATCH",
         body: formData,
         formData: true,
       }),
@@ -59,4 +94,6 @@ export const {
   useGetAllBlogsQuery,
   useAddBlogMutation,
   useDeleteBlogMutation,
+  useGetBlogQuery,
+  useEditBlogMutation,
 } = api;

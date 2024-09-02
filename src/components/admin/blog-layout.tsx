@@ -4,20 +4,37 @@ import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { newBlogsSchema } from "./newblog-schema";
+import { newBlogsSchema } from "./add-blog/newblog-schema";
 import { FaHeading } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import Image from "next/image";
-import { useAddBlogMutation } from "@/store/actions/slices/api-slice";
-import { useRouter } from "next/navigation";
+import {
+  useAddBlogMutation,
+  useEditBlogMutation,
+  useGetBlogQuery,
+} from "@/store/actions/slices/api-slice";
+import { useParams, useRouter } from "next/navigation";
 
 const NewBlogLayout = () => {
+  const router = useRouter();
+  const param: { id?: string } = useParams();
+  const { data: blogData } = useGetBlogQuery(
+    {
+      id: param.id ? Number(param.id) : 0,
+    },
+    {
+      skip: !param.id,
+      refetchOnMountOrArgChange: true,
+      refetchOnFocus: true,
+      refetchOnReconnect: true,
+    }
+  );
 
-  const router = useRouter()
   const [addBlog] = useAddBlogMutation();
+  const [editBlog] = useEditBlogMutation();
 
   const [isMounted, setIsMounted] = useState(false);
-  const [imagePreview, setImagePreview] = useState<Blob | null>(null);
+  const [imagePreview, setImagePreview] = useState<Blob | string | null>(null);
   const [imageFile, setImageFile] = useState<File | null>(null);
 
   const [stringLengths, setStringLength] = useState<
@@ -153,7 +170,9 @@ const NewBlogLayout = () => {
         throw new Error("Please Upload the Image");
       }
       if (!imageFile) {
-        throw new Error("Something went wrong");
+        if (!param.id) {
+          throw new Error("Something went wrong");
+        }
       }
 
       formData.append("title", data.title);
@@ -164,16 +183,22 @@ const NewBlogLayout = () => {
       hasSmallParagraph &&
         data?.smallParagraph !== undefined &&
         formData.append("small-paragraph", data.smallParagraph);
-      formData.append("banner", imageFile);
+      imageFile && formData.append("banner", imageFile);
+      param?.id && formData.append("id", param.id)
 
-      const res: {
-        message: string
-        submit: boolean
-      } = await addBlog(formData).unwrap();
+
+
+      let res: { message: string; submit: boolean };
+
+      if (param?.id) {
+        res = await editBlog(formData).unwrap();
+      } else {
+        res = await addBlog(formData).unwrap();
+      }
 
       if (res.submit) {
-        blogForm.reset()
-        router.push('/admin')
+        blogForm.reset();
+        router.push("/admin");
       }
     } catch (error) {
       console.log(error);
@@ -184,9 +209,42 @@ const NewBlogLayout = () => {
     setIsMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (blogData) {
+      blogForm.setValue("title", blogData?.blogs[0]?.title);
+      blogForm.setValue(
+        "smallParagraph",
+        blogData?.blogs[0]?.["small-paragraph"]
+          ? blogData?.blogs[0]?.["small-paragraph"]
+          : undefined
+      );
+      blogForm.setValue(
+        "description",
+        blogData?.blogs[0]?.description
+          ? blogData?.blogs[0]?.description
+          : undefined
+      );
+      blogForm.setValue(
+        "longParagraph",
+        blogData?.blogs[0]?.["long-paragraph"]
+      );
+
+      setImagePreview(blogData?.blogs[0]?.banner);
+    } else {
+      blogForm.setValue("title", "");
+      blogForm.setValue("smallParagraph", undefined);
+      blogForm.setValue("description", undefined);
+      blogForm.setValue("longParagraph", "");
+
+      setImagePreview(null);
+    }
+  }, [blogData, blogForm]);
+
   if (!isMounted) {
     return null;
   }
+
+  console.log(blogForm.watch());
 
   return (
     <form onSubmit={blogForm.handleSubmit(onSubmit)}>
@@ -212,6 +270,7 @@ const NewBlogLayout = () => {
             onChange={(e) => {
               onStringChange(e, "title");
             }}
+            value={blogForm.watch().title}
           />
         </span>
       </section>
@@ -240,6 +299,7 @@ const NewBlogLayout = () => {
           onChange={(e) => {
             onStringChange(e, "description");
           }}
+          value={blogForm.watch().description}
         ></textarea>
       </section>
 
@@ -256,10 +316,15 @@ const NewBlogLayout = () => {
               }}
             >
               <Image
-                src={URL.createObjectURL(imagePreview)}
+                src={
+                  imagePreview instanceof Blob
+                    ? URL.createObjectURL(imagePreview)
+                    : imagePreview
+                }
                 alt="Selected Banner"
                 width={200}
                 height={200}
+                priority
               />
             </div>
           ) : null}
@@ -300,6 +365,7 @@ const NewBlogLayout = () => {
           onChange={(e) => {
             onStringChange(e, "smallParagraph");
           }}
+          value={blogForm.watch().smallParagraph}
         ></textarea>
       </section>
 
@@ -325,10 +391,13 @@ const NewBlogLayout = () => {
           onChange={(e) => {
             onStringChange(e, "longParagraph");
           }}
+          value={blogForm.watch().longParagraph}
         ></textarea>
       </section>
 
-      <button type="submit">Add New Blog</button>
+      <button type="submit">
+        {param?.id ? "Update Changes" : "Add New Blog"}
+      </button>
     </form>
   );
 };
