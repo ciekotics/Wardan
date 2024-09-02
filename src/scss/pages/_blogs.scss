@@ -1,11 +1,13 @@
-#blogpost {
+#blogpost,
+#allblogs {
   min-height: 100vh;
   // height: 100vh;
 
   padding: 5rem 20rem;
+}
 
+#blogpost {
   .blogpost-article {
-
     height: 100%;
 
     display: flex;
