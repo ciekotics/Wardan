@@ -25,20 +25,36 @@ const ProductsCarousel = () => {
         className="carousel-inner"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {ALL_ITEMS_DATA.map((partner, index) => (
+        {ALL_ITEMS_DATA.map((item, index) => (
           <div key={index} className="carousel-item">
             <div className="content">
               <div className="content__left">
                 <div className="content__left-side content__left-side--front">
-                  <Image src={partner.imageSrc} alt={partner.title} priority />
+                  <Image src={item.imageSrc} alt={item.title} priority />
                 </div>
 
                 <div className="content__left-side content__left-side--back">
-                  <Image src={partner.backImageSrc} alt={partner.title} priority />
+                  <Image src={item.backImageSrc} alt={item.title} priority />
                 </div>
               </div>
 
-              <div className="content__right">hey</div>
+              <div className="content__right">
+                <h1 className="heading">{item.heading()}</h1>
+                <h5 className="description">{item.description1}</h5>
+                <div className="sizes-wrapper">
+                  <p>Sizes :</p>
+
+                  <span className="sizes">
+                    {item.sizes.map((size, index) => {
+                      return (
+                        <span key={index} className="sizes__item">
+                          {size}
+                        </span>
+                      );
+                    })}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         ))}

@@ -75,9 +75,9 @@ const AboutUsDetails = () => {
             spices and experience the passion and dedication that goes into
             every product we create.
           </p>
-          <div className="mobile-text">Contact On :</div>
+          <div className="mobile-text">Mail Us:</div>
           <a href="tel:+804001234567" className="mobile">
-            +91 980-123-4567
+            wardanspices@gmail.com
           </a>
         </div>
         <figure className="about-banner">

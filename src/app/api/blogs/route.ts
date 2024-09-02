@@ -158,9 +158,9 @@ export async function DELETE(request: NextRequest) {
   }
 }
 
-// Exporting config to disable default body parser
-export const config = {
-  api: {
-    bodyParser: false, // Disable the default body parser to handle multipart data
-  },
-};
+// // Exporting config to disable default body parser
+// export const config = {
+//   api: {
+//     bodyParser: false, // Disable the default body parser to handle multipart data
+//   },
+// };
