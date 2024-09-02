@@ -1,11 +1,11 @@
 import { ReduxWrapper } from "../redux-wrapper"
 import AdminAllBlogs from "./admin-all-blogs"
 
-const AdminBlogs = () => {
+const AdminBlogs = ({ search }: { search: string }) => {
   return (
     <div className="blogs">
       <ReduxWrapper>
-        <AdminAllBlogs />
+        <AdminAllBlogs search={search} />
       </ReduxWrapper>
     </div>
   )

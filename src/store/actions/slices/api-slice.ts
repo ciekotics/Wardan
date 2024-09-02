@@ -7,11 +7,29 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["Blogs"],
   endpoints: (build) => ({
-    getDashboardMetrics: build.query<{ blogs: Blog[] }, void>({
-      query: () => ({
-        url: APIEnpoint.blogs,
-        method: "GET",
-      }),
+    getAllBlogs: build.query<{ blogs: Blog[] }, {
+      search?: string
+      limit?: number
+      offset?: number
+    }>({
+      query: (params) => {
+        const customParams = { ...params }
+        Object.keys(customParams).forEach((key) => {
+          if (
+            customParams[key as keyof object] === null ||
+            customParams[key as keyof object] === undefined ||
+            customParams[key as keyof object] === '' ||
+            customParams[key as keyof object] === '[]'
+          ) {
+            delete customParams[key as keyof object]
+          }
+        })
+        return {
+          url: APIEnpoint.blogs,
+          method: "GET",
+          params: customParams,
+        }
+      },
       providesTags: ["Blogs"],
     }),
     addBlog: build.mutation<{
@@ -30,6 +48,6 @@ export const api = createApi({
 });
 
 export const {
-  useGetDashboardMetricsQuery,
+  useGetAllBlogsQuery,
   useAddBlogMutation,
 } = api;

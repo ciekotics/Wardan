@@ -20,7 +20,7 @@
         width: 85%;
         height: 65%;
 
-        padding: 1rem;
+        padding: 0 1rem;
 
         display: flex;
         flex-direction: row;
@@ -46,7 +46,7 @@
           }
 
           &::placeholder {
-            font-size: $font-size-md;
+            font-size: $font-size-base;
           }
         }
       }

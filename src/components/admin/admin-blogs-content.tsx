@@ -1,10 +1,10 @@
 import AdminBlogs from "./admin-blogs"
 import AdminBlogsPagination from "./admin-blogs-pagination"
 
-const AdminBlogsContent = () => {
+const AdminBlogsContent = ({ search }: { search: string }) => {
   return (
     <div className="blogs-content">
-      <AdminBlogs />
+      <AdminBlogs search={search} />
       <AdminBlogsPagination />
     </div>
   )

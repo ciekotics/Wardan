@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const ALLOWED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+// const ALLOWED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 const RATE_LIMIT = 100; // Number of requests allowed
 const TIME_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
 

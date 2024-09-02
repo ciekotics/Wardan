@@ -4,4 +4,7 @@ export interface GlobalSettings {
 
   blogsLimit: number
   blogsOffset: number
+
+  searchBlogsAdmin: string
+  toRefetchBlogsAdmin: boolean
 }
