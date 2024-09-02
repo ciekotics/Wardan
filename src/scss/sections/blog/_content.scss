@@ -10,18 +10,12 @@
     flex-direction: column;
     gap: 2rem;
 
-    .title {
-      h1 {}
-    }
+    // .title {
+    //   h1 {}
+    // }
 
-    .description {
-      h1 {}
-    }
-
-    .small-paragraph {
-      h1 {}
-    }
-
+    .description,
+    .small-paragraph,
     .long-paragraph {
       h1 {
         font-size: $font-size-base;
