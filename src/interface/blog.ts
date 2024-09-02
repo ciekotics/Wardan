@@ -1,6 +1,6 @@
 
 export interface Blog {
-  id?: number;
+  id: number;
   title: string;
   slug: string;
   description: string | null;

@@ -2,6 +2,7 @@ import { handleFileUpload } from '@/lib/uploadHandler';
 import { NextRequest, NextResponse } from 'next/server';
 import blogs from '@/config/___persist___/blogs/db.json';
 import { Blog } from '@/interface';
+import { handleDeleteBlog } from '@/lib/deleteBlogHandler';
 
 // GET REQUEST ============================================================================================
 
@@ -72,6 +73,26 @@ export async function POST(request: NextRequest) {
     // return NextResponse.json({ message: 'Data received and logged successfully' }, { status: 200 });
   } catch (error) {
     console.error('Error handling request:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}
+
+// REMOVE REQUEST BY ID ==================================================================================
+
+export async function DELETE(request: NextRequest) {
+  try {
+    // Parse the JSON body from the request
+    const body = await request.json();
+    const id = body.id;
+
+    if (!id || isNaN(Number(id))) {
+      return NextResponse.json({ error: 'Invalid ID' }, { status: 400 });
+    }
+
+    return await handleDeleteBlog(id);
+    
+  } catch (error) {
+    console.error('Error removing blog:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

@@ -88,10 +88,17 @@
           }
 
           .title {
+            
+            width: 80%;
+            height: fit-content;
+
             z-index: 100;
             position: absolute;
             bottom: 10%;
             left: 50%;
+
+            overflow-wrap: break-word;
+            text-align: center;
 
             transform: translate(-50%, 0);
 

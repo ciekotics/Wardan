@@ -44,10 +44,19 @@ export const api = createApi({
       }),
       invalidatesTags: ["Blogs"],
     }),
+    deleteBlog: build.mutation<{ message: string }, { id: number }>({
+      query: (params) => ({
+        url: APIEnpoint.blogs,
+        method: "DELETE",
+        body: params,
+      }),
+      invalidatesTags: ["Blogs"],
+    }),
   }),
 });
 
 export const {
   useGetAllBlogsQuery,
   useAddBlogMutation,
+  useDeleteBlogMutation,
 } = api;
