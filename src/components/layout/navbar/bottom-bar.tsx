@@ -1,11 +1,11 @@
 "use client";
 
-import Link from 'next/link'
+// import Link from 'next/link'
 import { BOTTOMBAR_TABS } from "@/config/constants/navbar-data";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { MdOutlineDashboard } from "react-icons/md";
+import { useEffect, useState } from "react";
+// import { FaLongArrowAltRight } from "react-icons/fa";
+// import { MdOutlineDashboard } from "react-icons/md";
 
 const Bottombar = () => {
   const router = useRouter();
@@ -15,7 +15,13 @@ const Bottombar = () => {
     "home" | "about wardan" | "products" | "blogs" | "contact"
   >("home");
 
-  if (!location.split("/").includes("/blogs")) {
+  useEffect(() => {
+    if (location.split("/").includes("blogs")) {
+      setActiveTab('blogs')
+    }
+  }, [location])
+
+  // if (!location.split("/").includes("/blogs")) {
     return (
       <ul className="nav__bottombar">
         {BOTTOMBAR_TABS.map((item, index) => {
@@ -36,31 +42,31 @@ const Bottombar = () => {
         })}
       </ul>
     );
-  } else {
-    return (
-      <div className={"nav__bottombar--admin"}>
-        <Link
-          className="item dashboard"
-          href='/admin'
-          target='_blank'
-          rel='noreferrer noopener'
-        >
-          <MdOutlineDashboard />
-          <span>Dashboard</span>
-        </Link>
+  // } else {
+  //   return (
+  //     <div className={"nav__bottombar--admin"}>
+  //       <Link
+  //         className="item dashboard"
+  //         href='/admin'
+  //         target='_blank'
+  //         rel='noreferrer noopener'
+  //       >
+  //         <MdOutlineDashboard />
+  //         <span>Dashboard</span>
+  //       </Link>
 
-        <Link
-          className="item"
-          href='/admin/blogs'
-          target='_blank'
-          rel='noreferrer noopener'
-        >
-          <span>Go To Admin Panel</span>
-          <FaLongArrowAltRight />
-        </Link>
-      </div>
-    );
-  }
+  //       <Link
+  //         className="item"
+  //         href='/admin/blogs'
+  //         target='_blank'
+  //         rel='noreferrer noopener'
+  //       >
+  //         <span>Go To Admin Panel</span>
+  //         <FaLongArrowAltRight />
+  //       </Link>
+  //     </div>
+  //   );
+  // }
 };
 
 export default Bottombar;
