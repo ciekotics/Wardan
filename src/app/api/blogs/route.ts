@@ -40,16 +40,40 @@ export async function GET(request: NextRequest) {
 // POST REQUEST ===========================================================================================
 
 export async function POST(request: NextRequest) {
-  // To handle the request with the same logic as `upload.ts`, convert NextRequest to NextApiRequest
-  const { body } = request;
-  
-  // Assuming the body is a ReadableStream, you'll need to handle that as required.
-  // For simplicity, here's how you could directly pass it to the upload handler.
+  try {
+    const formData = await request.formData();
+    
+    const data: Record<string, any> = {};
+    
+    formData.forEach(async (value, key) => {
+      if (value instanceof File) {
 
-  const req = request as any; // Type-casting for simplicity
-  const res = NextResponse; // Assume this is where the NextResponse logic will be handled
+        data[key] = {
+          name: value.name,
+          size: value.size,
+          type: value.type
+        };
+        
+        // Convert file to buffer
+        const buffer = await value.arrayBuffer();
+        
+        console.log(`${key} - Buffer (first 100 bytes):`, new Uint8Array(buffer).slice(0, 100));
+        console.log(`${key} - Buffer length:`, buffer.byteLength);
+        console.log(`${key} - MIME type:`, value.type);
+      } else {
+        data[key] = value;
+      }
+    });
 
-  return await handleFileUpload(req, res);
+    // await new Promise(resolve => setTimeout(resolve, 0));
+
+    return await handleFileUpload(formData);
+
+    // return NextResponse.json({ message: 'Data received and logged successfully' }, { status: 200 });
+  } catch (error) {
+    console.error('Error handling request:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
 }
 
 // Exporting config to disable default body parser

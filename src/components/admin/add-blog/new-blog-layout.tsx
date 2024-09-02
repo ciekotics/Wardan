@@ -9,9 +9,11 @@ import { FaHeading } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import Image from "next/image";
 import { useAddBlogMutation } from "@/store/actions/slices/api-slice";
+import { useRouter } from "next/navigation";
 
 const NewBlogLayout = () => {
 
+  const router = useRouter()
   const [addBlog] = useAddBlogMutation();
 
   const [isMounted, setIsMounted] = useState(false);
@@ -147,7 +149,6 @@ const NewBlogLayout = () => {
     const formData = new FormData();
 
     try {
-
       if (!imagePreview) {
         throw new Error("Please Upload the Image");
       }
@@ -155,16 +156,25 @@ const NewBlogLayout = () => {
         throw new Error("Something went wrong");
       }
 
-      formData.append('title', data.title);
-      formData.append('long-paragraph', data.longParagraph);
-      hasDescription && data?.description !== undefined && formData.append('description', data?.description);
-      hasSmallParagraph && data?.smallParagraph !== undefined && formData.append('small-paragraph', data.smallParagraph);
-      formData.append('banner', JSON.stringify(imageFile));
+      formData.append("title", data.title);
+      formData.append("long-paragraph", data.longParagraph);
+      hasDescription &&
+        data?.description !== undefined &&
+        formData.append("description", data?.description);
+      hasSmallParagraph &&
+        data?.smallParagraph !== undefined &&
+        formData.append("small-paragraph", data.smallParagraph);
+      formData.append("banner", imageFile);
 
-      const res: any = await addBlog(formData).unwrap();
+      const res: {
+        message: string
+        submit: boolean
+      } = await addBlog(formData).unwrap();
 
-      console.log(res)
-
+      if (res.submit) {
+        blogForm.reset()
+        router.push('/admin')
+      }
     } catch (error) {
       console.log(error);
     }

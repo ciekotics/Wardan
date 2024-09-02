@@ -1,4 +1,24 @@
 {
   "data": [
+    {
+      "id": 1,
+      "title": "ffffffffffffff",
+      "slug": "",
+      "description": null,
+      "small-paragraph": null,
+      "long-paragraph": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+      "banner": "/uploads/blogs/1_blog.jpg",
+      "created-at": "Mon Sep 02 2024"
+    },
+    {
+      "id": 2,
+      "title": "ffffffffffffff",
+      "slug": "",
+      "description": null,
+      "small-paragraph": null,
+      "long-paragraph": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+      "banner": "/uploads/blogs/2_blog.jpg",
+      "created-at": "Mon Sep 02 2024"
+    }
   ]
 }

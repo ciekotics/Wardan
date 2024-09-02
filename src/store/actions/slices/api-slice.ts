@@ -14,7 +14,10 @@ export const api = createApi({
       }),
       providesTags: ["Blogs"],
     }),
-    addBlog: build.mutation<void, FormData>({
+    addBlog: build.mutation<{
+      message: string
+      submit: boolean
+    }, FormData>({
       query: (formData) => ({
         url: APIEnpoint.blogs,
         method: "POST",
