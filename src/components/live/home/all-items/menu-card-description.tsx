@@ -14,7 +14,7 @@ const CardDescription = ({
   title: string;
   description: string;
 }) => {
-  const [hasHovered, setHasHovered] = useState(false);
+  const [hasHovered, setHasHovered] = useState(true);
   return (
     <div className={`content-wrapper`}>
       <div className="title-wrapper">

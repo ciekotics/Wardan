@@ -12,7 +12,7 @@ const Products = () => {
             title={item.title}
             // price={item.price}
             description={item.description}
-            altText={item.altText}
+            altText={''}
           />
         ))}
       </ul>

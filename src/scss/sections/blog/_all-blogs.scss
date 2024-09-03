@@ -1,0 +1,13 @@
+.allblogs-items {
+  margin-top: 2rem;
+
+  min-height: 85vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__item {
+    height: fit-content;
+    width: 100%;
+  }
+}

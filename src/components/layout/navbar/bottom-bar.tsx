@@ -2,6 +2,7 @@
 
 // import Link from 'next/link'
 import { BOTTOMBAR_TABS } from "@/config/constants/navbar-data";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 // import { FaLongArrowAltRight } from "react-icons/fa";
@@ -17,31 +18,39 @@ const Bottombar = () => {
 
   useEffect(() => {
     if (location.split("/").includes("blogs")) {
-      setActiveTab('blogs')
+      setActiveTab("blogs");
     }
-  }, [location])
+  }, [location]);
 
   // if (!location.split("/").includes("/blogs")) {
-    return (
-      <ul className="nav__bottombar">
-        {BOTTOMBAR_TABS.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className={`nav__bottombar-items ${
-                activeTab === item.title ? "active" : ""
-              }`}
-              onClick={() => {
+  return (
+    <ul className="nav__bottombar">
+      {BOTTOMBAR_TABS.map((item, index) => {
+        return (
+          <li
+            key={index}
+            className={`nav__bottombar-items ${
+              activeTab === item.title ? "active" : ""
+            }`}
+            onClick={() => {
+              if (item.title !== "blogs") {
                 setActiveTab(item.title);
                 router.push(`${item.href}`);
-              }}
-            >
-              {item.title.toUpperCase()}
-            </li>
-          );
-        })}
-      </ul>
-    );
+              }
+            }}
+          >
+            {item.title === "blogs" ? (
+              <Link href={"/blogs"} target="_blank" rel="norefferer noopener">
+                {item.title.toUpperCase()}
+              </Link>
+            ) : (
+              <>{item.title.toUpperCase()}</>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
   // } else {
   //   return (
   //     <div className={"nav__bottombar--admin"}>

@@ -1,27 +1,9 @@
-import Image from "next/image";
-
-// CUSTOM IMPORT
-import Bottombar from "./bottom-bar";
-import Topbar from "./top-bar";
-import Link from "next/link";
+import HeaderContent from "./header-content";
 
 const Navbar = () => {
   return (
     <header id="header">
-      <Link href={"/"}>
-        <Image
-          src={"/images/logo_1.svg"}
-          alt="wardan-app-logo"
-          width={150}
-          height={120}
-          priority
-        />
-      </Link>
-
-      <nav className="nav">
-        <Topbar />
-        <Bottombar />
-      </nav>
+      <HeaderContent />
     </header>
   );
 };

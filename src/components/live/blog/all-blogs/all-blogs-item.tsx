@@ -1,7 +1,7 @@
 
 const AllBlogsItem = () => {
   return (
-    <div>AllBlogsItem</div>
+    <div className="allblogs-items__item">AllBlogsItem</div>
   )
 }
 
