@@ -94,6 +94,20 @@ export default function StoreProvider({
   }
   const persistor = persistStore(storeRef.current);
 
+  // const storeRef = useRef<AppStore | null>(null);
+
+  // // Initialize store and persistor only once
+  // const store = useMemo(() => {
+  //   if (!storeRef.current) {
+  //     storeRef.current = makeStore();
+  //     setupListeners(storeRef.current.dispatch);
+  //   }
+  //   return storeRef.current;
+  // }, []);
+
+  // // Use memoized persistor
+  // const persistor = useMemo(() => persistStore(store), [store]);
+
   return (
     <Provider store={storeRef.current}>
       <PersistGate loading={loading ?? null} persistor={persistor}>
