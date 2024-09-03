@@ -1,5 +1,6 @@
 import Item1 from "./item-1";
 import Item2 from "./item-2";
+import Item3 from "./item-3";
 
 const HeroSection = () => {
   return (
@@ -13,13 +14,7 @@ const HeroSection = () => {
       <div className="item-3">
         <h3>Top News</h3>
 
-        <div className="top-news">
-          {Array.from({ length: 3 }).map((_, index) => {
-            return (
-              <div key={index} className="top-news__item"></div>
-            )
-          })}
-        </div>
+        <Item3 />
       </div>
     </section>
   );

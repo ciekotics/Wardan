@@ -24,22 +24,72 @@
         position: relative;
 
         border-radius: 1rem;
-      
+        overflow: hidden;
+
         &__loading {
           background-color: rgba($color-black-shade3, 0.3);
           position: relative;
-          overflow: hidden;
         }
-      
+
         &__loading::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 75%);
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.1) 25%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0.1) 75%
+          );
           animation: shimmer 1.5s infinite;
+        }
+      }
+
+      .blog-card {
+        position: relative;
+
+        img {
+          position: absolute;
+
+          top: 0;
+          left: 0;
+          z-index: -1;
+
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .content {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 80%;
+
+          a {
+            width: 100%;
+
+            color: $color-white;
+            font-size: $font-size-lg;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          p {
+            color: $color-white-shade1;
+          }
         }
       }
     }

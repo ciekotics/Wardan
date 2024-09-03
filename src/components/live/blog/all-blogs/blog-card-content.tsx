@@ -1,8 +1,15 @@
 import { useGetAllBlogsQuery } from "@/store/actions/slices/api-slice";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 const BlogCardContent = () => {
-  const { data: allBlogs, isSuccess, isLoading, isError } = useGetAllBlogsQuery({});
+  const {
+    data: allBlogs,
+    isSuccess,
+    isLoading,
+    isError,
+  } = useGetAllBlogsQuery({});
 
   // if (isLoading) {
   //   return <LoadingSkeleton />;
@@ -13,23 +20,25 @@ const BlogCardContent = () => {
   }
 
   return (
-    <div className="blog-content">
+    <React.Fragment>
       {allBlogs?.blogs?.map((blog, index) => (
-        <div key={index} className="blog-card">
-          {/* Render your blog card here */}
-          {blog.title}
+        <div key={index} className="card blog-card">
+          <div className="content">
+            <Link href={`/blogs/${blog.id}`}>{blog.title}</Link>
+            <p>{blog["created-at"]}</p>
+          </div>
+
+          <Image
+            src={blog.banner}
+            alt={blog.title + " " + blog.id}
+            width={1000}
+            height={1000}
+            priority
+          />
         </div>
       ))}
-    </div>
+    </React.Fragment>
   );
 };
-
-// const LoadingSkeleton = () => (
-//   <React.Fragment>
-//     {Array.from({ length: 12 }).map((_, index) => (
-//       <div key={index} className="card card__loading"></div>
-//     ))}
-//   </React.Fragment>
-// );
 
 export default BlogCardContent;
