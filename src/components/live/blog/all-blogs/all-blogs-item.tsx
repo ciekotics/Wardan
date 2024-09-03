@@ -1,7 +1,10 @@
+import BlogCardWrapper from "./blog-card-wrapper"
 
 const AllBlogsItem = () => {
   return (
-    <div className="allblogs-items__item">AllBlogsItem</div>
+    <div className="allblogs-items__item">
+      <BlogCardWrapper />
+    </div>
   )
 }
 
