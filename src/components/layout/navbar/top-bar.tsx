@@ -14,15 +14,15 @@ const Topbar = () => {
     <div className="nav__topbar">
       <Pincode />
 
-      <FaFacebook className="mr-10" size={35} />
-      <GrInstagram className="mr-10" size={35} />
-      <PiLineVerticalLight
-        className="mr-10"
-        size={35}
-        style={{ color: "#00000035" }}
-      />
+      <FaFacebook className="mr-10 icon" size={35} />
+      <GrInstagram className="mr-10 icon" size={35} />
 
       <ReduxWrapper>
+        <PiLineVerticalLight
+          className="mr-10"
+          size={35}
+          style={{ color: "#00000035" }}
+        />
         <OrderOnline />
       </ReduxWrapper>
 

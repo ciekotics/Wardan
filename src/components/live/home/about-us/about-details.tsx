@@ -51,7 +51,6 @@ const AboutUsDetails = () => {
     };
   }, []);
 
-  console.log(isPlaying);
   return (
     <div>
       <div className="container">

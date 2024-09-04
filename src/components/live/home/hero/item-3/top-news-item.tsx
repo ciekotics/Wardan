@@ -14,7 +14,6 @@ const TopNewsItem = () => {
     return <div>Error loading blogs</div>;
   }
 
-  // Optional: Show loading state
   if (isLoading) {
     return (
       <div className="top-news__item top-news__item-loading">

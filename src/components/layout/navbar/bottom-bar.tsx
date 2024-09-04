@@ -1,20 +1,20 @@
 "use client";
 
-// import Link from 'next/link'
 import { BOTTOMBAR_TABS } from "@/config/constants/navbar-data";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-// import { FaLongArrowAltRight } from "react-icons/fa";
-// import { MdOutlineDashboard } from "react-icons/md";
+import React, { useEffect, useState } from "react";
 
-const Bottombar = () => {
+import { motion } from "framer-motion";
+
+const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
   const router = useRouter();
   const location = usePathname();
 
   const [activeTab, setActiveTab] = useState<
     "home" | "about wardan" | "products" | "blogs" | "contact"
   >("home");
+  const [toggleNav, setToggleNav] = useState(false);
 
   useEffect(() => {
     if (location.split("/").includes("blogs")) {
@@ -22,60 +22,71 @@ const Bottombar = () => {
     }
   }, [location]);
 
-  // if (!location.split("/").includes("/blogs")) {
   return (
-    <ul className="nav__bottombar">
-      {BOTTOMBAR_TABS.map((item, index) => {
-        return (
-          <li
-            key={index}
-            className={`nav__bottombar-items ${
-              activeTab === item.title ? "active" : ""
-            }`}
-            onClick={() => {
-              if (item.title !== "blogs") {
-                setActiveTab(item.title);
-                router.push(`${item.href}`);
-              }
-            }}
-          >
+    <React.Fragment>
+      <ul className="nav__bottombar">
+        {BOTTOMBAR_TABS.map((item, index) => {
+          return (
+            <li
+              key={index}
+              className={`nav__bottombar-items ${
+                activeTab === item.title ? "active" : ""
+              }`}
+              onClick={() => {
+                if (item.title !== "blogs") {
+                  setActiveTab(item.title);
+                  router.push(`${item.href}`);
+                }
+              }}
+            >
+              {item.title === "blogs" ? (
+                <Link href={"/blogs"} target="_blank" rel="norefferer noopener">
+                  {item.title.toUpperCase()}
+                </Link>
+              ) : (
+                <>{item.title.toUpperCase()}</>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+
+      <motion.div
+        className="nav__bottombar-menu"
+        initial={{ x: "-100%" }}
+        animate={{ x: toggleNav ? "0%" : "-100%" }}
+        transition={{ duration: 0.3 }}
+      >
+        {BOTTOMBAR_TABS.map((item, index) => (
+          <li className="nav__bottombar-menu--item" key={index}>
+            <div className="separator"></div>
             {item.title === "blogs" ? (
-              <Link href={"/blogs"} target="_blank" rel="norefferer noopener">
+              <Link href="/blogs" target="_blank" rel="noreferrer noopener">
                 {item.title.toUpperCase()}
               </Link>
             ) : (
               <>{item.title.toUpperCase()}</>
             )}
           </li>
-        );
-      })}
-    </ul>
-  );
-  // } else {
-  //   return (
-  //     <div className={"nav__bottombar--admin"}>
-  //       <Link
-  //         className="item dashboard"
-  //         href='/admin'
-  //         target='_blank'
-  //         rel='noreferrer noopener'
-  //       >
-  //         <MdOutlineDashboard />
-  //         <span>Dashboard</span>
-  //       </Link>
+        ))}
+      </motion.div>
 
-  //       <Link
-  //         className="item"
-  //         href='/admin/blogs'
-  //         target='_blank'
-  //         rel='noreferrer noopener'
-  //       >
-  //         <span>Go To Admin Panel</span>
-  //         <FaLongArrowAltRight />
-  //       </Link>
-  //     </div>
-  //   );
-  // }
+      <button
+        className={`nav-open-btn ${scrolled ? "scroll" : "unscroll"}`}
+        aria-label="open menu"
+        onClick={() => setToggleNav(!toggleNav)}
+      >
+        <span className="line line-1"></span>
+        <span className="line line-2"></span>
+        <span className="line line-3"></span>
+      </button>
+
+      <div
+        className={`overlay ${toggleNav ? "active" : ""}`}
+        onClick={() => setToggleNav(!toggleNav)}
+      ></div>
+    </React.Fragment>
+  );
 };
 
 export default Bottombar;

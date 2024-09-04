@@ -1,12 +1,29 @@
 #header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  margin: 0 auto;
-  padding: 1rem 20rem 0;
+  margin: 0;
   background-color: $color-white;
   z-index: 900;
   border-bottom: 1px solid rgba($color-black, 0.1);
+  width: 100vw;
+  
+  padding: 1rem 20rem 0;
+  @media (max-width: $screen-2xl) {
+    padding: 1rem 15rem 0;
+  }
+
+  @media (max-width: $screen-xl) {
+    padding: 1rem 10rem 0;
+  }
+
+  @media (max-width: $screen-lg) {
+    padding: 1rem 8rem 0;
+  }
+
+  @media (max-width: $screen-md) {
+    padding: 1rem 2rem 0;
+  }
 
   .header-content {
     display: flex;
@@ -33,6 +50,12 @@
         display: flex;
         align-items: center;
 
+        .icon {
+          @media (max-width: $screen-2xl) {
+            width: 3rem;
+          }
+        }
+
         #pincode {
           margin-right: 1.2rem;
           width: 12rem;
@@ -45,6 +68,10 @@
           justify-content: flex-start;
           gap: 0.5rem;
           cursor: pointer;
+
+          @media (max-width: $screen-xl) {
+            display: none;
+          }
 
           input {
             width: 100%;
@@ -83,6 +110,10 @@
           height: 3.2rem;
           border: 2px solid rgba($color-black, 0.1);
           border-radius: 50%;
+
+          @media (max-width: $screen-xl) {
+            display: none;
+          }
         }
 
         .order-online {
@@ -101,7 +132,80 @@
           font-weight: 800;
           letter-spacing: 0.1rem;
           cursor: pointer;
+
+          z-index: 1001;
+
+          .seen-md {
+            @media (max-width: $screen-md) {
+              display: none;
+            }
+          }
+
+          .unseen-md {
+            border: 0.2rem solid $color-primary;
+            border-radius: 1rem;
+            height: 100%;
+            width: 5rem;
+
+            @media (min-width: $screen-md) {
+              display: none;
+            }
+          }
+
+          @media (max-width: $screen-md) {
+            width: 3.2rem;
+            padding: 0;
+            border: none;
+            color: $color-primary-dark;
+          }
         }
+      }
+
+      .nav-open-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        border: 1px solid rgba($color-black, 0.1);
+        background: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgba($color-black, 0.1);
+        }
+
+        @media (min-width: $screen-xl) {
+          display: none;
+        }
+
+        .line {
+          width: 3rem;
+          height: 0.1rem;
+          background-color: $color-black;
+          margin: 4px 0;
+          transform-origin: left;
+          transition: background-color 0.3s ease;
+
+          animation: menuBtn 400ms ease-in-out alternate infinite;
+        }
+
+        .line-2 {
+          animation-delay: 150ms;
+        }
+
+        .line-3 {
+          animation-delay: 300ms;
+        }
+      }
+
+      .scroll {
+        padding: 0 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .unscroll {
+        padding: 1.2rem;
       }
 
       &__bottombar {
@@ -118,6 +222,10 @@
           padding-inline: 16px;
           cursor: pointer;
 
+          @media (max-width: $screen-xl) {
+            display: none;
+          }
+
           &:first-child {
             padding-left: 0;
           }
@@ -126,6 +234,43 @@
           }
 
           border-bottom: 3px solid #00000017;
+        }
+
+        &-menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 36rem;
+          height: 100%;
+          background-color: $color-black;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          z-index: 1001;
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+          overflow-y: auto; // Ensure content can scroll if needed
+
+          .nav__bottombar-menu--item {
+            position: relative;
+            margin-bottom: 1rem;
+
+            .separator {
+              height: 1px;
+              background-color: $color-black-shade2;
+              margin-bottom: 0.5rem;
+            }
+
+            a {
+              text-decoration: none;
+              color: $color-white;
+              font-weight: bold;
+              transition: color 0.3s ease;
+
+              &:hover {
+                color: $color-primary;
+              }
+            }
+          }
         }
 
         .active {
@@ -163,6 +308,12 @@
         width: 25rem;
         height: 100%;
         margin-right: 1rem;
+
+        @media (max-width: $screen-sm) {
+          width: 10rem;
+          height: 100%;
+          // margin: 1rem;
+        }
       }
     }
   }

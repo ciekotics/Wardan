@@ -3,3 +3,23 @@
   overflow-y: auto;
   scroll-snap-type: mandatory y;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($color-black-shade1, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+
+  cursor: pointer;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

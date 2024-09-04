@@ -1,9 +1,32 @@
 #hero {
-  margin: 4rem auto 6rem;
+  margin: 20rem auto 6rem;
   @include basePadding;
 
   height: 55vh;
   width: 100vw;
+
+  padding: 1rem 20rem 0;
+  @media (max-width: $screen-2xl) {
+    padding: 1rem 15rem 0;
+    height: 80vh;
+    gap: 2rem 1rem;
+  }
+
+  @media (max-width: $screen-xl) {
+    padding: 1rem 10rem 0;
+    height: 100vh;
+
+    margin-top: 15rem;
+  }
+
+  @media (max-width: $screen-lg) {
+    padding: 1rem 8rem 0;
+    height: 75vh;
+  }
+
+  @media (max-width: $screen-md) {
+    padding: 1rem 2rem 0;
+  }
 
   .item-1,
   .item-2,
@@ -236,12 +259,24 @@
       justify-content: flex-start;
       gap: 1rem;
 
+      @media (max-width: $screen-2xl) {
+        align-items: flex-end;
+      }
+
+      @media (max-width: $screen-xl) {
+        align-items: center;
+      }
+
       &__item {
         width: 90%;
         height: 10rem;
         border-radius: 1rem;
         position: relative;
         overflow: hidden; // Ensure content doesn’t overflow its bounds
+
+        @media (max-width: $screen-xl) {
+          width: 100%;
+        }
 
         img {
           width: 100%;

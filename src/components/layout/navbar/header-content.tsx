@@ -34,7 +34,7 @@ const HeaderContent = () => {
 
       <nav className="nav">
         <Topbar />
-        <Bottombar />
+        <Bottombar scrolled={isScrolled} />
       </nav>
     </div>
   );
