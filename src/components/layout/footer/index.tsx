@@ -21,27 +21,29 @@ const Footer = () => {
             flavor to kitchens around the globe.
           </p>
         </div>
-        <div className="middle">
-          <p>Useful Links</p>
+        <div className="wrap-last-two">
+          <div className="middle">
+            <p>Useful Links</p>
 
-          <div className="links">
-            <Link href={"/"}>Home</Link>
-            <Link href={"/"}>Our Products</Link>
-            <Link href={"/blogs"}>Blogs</Link>
-            <Link href={"/"}>Contact Us</Link>
-            <Link href={"/"}>How It Works</Link>
+            <div className="links">
+              <Link href={"/"}>Home</Link>
+              <Link href={"/"}>Our Products</Link>
+              <Link href={"/blogs"}>Blogs</Link>
+              <Link href={"/"}>Contact Us</Link>
+              <Link href={"/"}>How It Works</Link>
+            </div>
           </div>
-        </div>
-        <div className="right">
-          <p>Contact Us</p>
+          <div className="right">
+            <p>Contact Us</p>
 
-          <div className="links">
-            <div className="mail">
-              <span className="icon">
-                <MdOutlineMailOutline size={20} />
-                <span>Mail Us :</span>
-              </span>
-              <Link href={"/"}>wardanspices@gmail.com</Link>
+            <div className="links">
+              <div className="mail">
+                <span className="icon">
+                  <MdOutlineMailOutline size={20} />
+                  <span>Mail Us :</span>
+                </span>
+                <Link href={"/"}>wardanspices@gmail.com</Link>
+              </div>
             </div>
           </div>
         </div>
@@ -51,7 +53,8 @@ const Footer = () => {
         <div className="w-1/2 bottom-tabs__links">
           <h5>Sitemap</h5>
           <h5>Disclaimer</h5>
-          <h5>Privacy Policy</h5>
+          <h5 className="above-md">Privacy Policy</h5>
+          <h5 className="below-md">Privacy</h5>
         </div>
       </div>
     </footer>

@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
+import NavMenu from "./nav-menu";
 
 const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
   const router = useRouter();
@@ -21,6 +22,22 @@ const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
       setActiveTab("blogs");
     }
   }, [location]);
+
+  useEffect(() => {
+    // Handle window scroll behavior based on toggleNav state
+    if (toggleNav) {
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset the overflow property
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [toggleNav]);
 
   return (
     <React.Fragment>
@@ -57,18 +74,7 @@ const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
         animate={{ x: toggleNav ? "0%" : "-100%" }}
         transition={{ duration: 0.3 }}
       >
-        {BOTTOMBAR_TABS.map((item, index) => (
-          <li className="nav__bottombar-menu--item" key={index}>
-            <div className="separator"></div>
-            {item.title === "blogs" ? (
-              <Link href="/blogs" target="_blank" rel="noreferrer noopener">
-                {item.title.toUpperCase()}
-              </Link>
-            ) : (
-              <>{item.title.toUpperCase()}</>
-            )}
-          </li>
-        ))}
+        <NavMenu setToggle={setToggleNav} />
       </motion.div>
 
       <button

@@ -303,11 +303,7 @@
       border-radius: 50%;
 
       &.prev {
-        left: 20rem;
-
-        @media (max-width: $screen-xl) {
-          left: 15rem;
-        }
+        left: 12rem;
 
         @media (max-width: $screen-lg) {
           left: 10rem;
@@ -319,11 +315,7 @@
       }
 
       &.next {
-        right: 20rem;
-
-        @media (max-width: $screen-xl) {
-          right: 15rem;
-        }
+        right: 12rem;
 
         @media (max-width: $screen-lg) {
           right: 10rem;

@@ -10,6 +10,21 @@
     text-align: center;
 
     padding: 8rem 30rem;
+    @media (max-width: $screen-2xl) {
+      padding: 8rem 25rem 0;
+    }
+  
+    @media (max-width: $screen-xl) {
+      padding: 8rem 20rem 0;
+    }
+  
+    @media (max-width: $screen-lg) {
+      padding: 8rem 12rem 0;
+    }
+  
+    @media (max-width: $screen-md) {
+      padding: 8rem 2rem 0;
+    }
 
     &::before {
       content: "";
@@ -51,9 +66,13 @@
       height: 50%;
 
       p {
+        color: $color-white;
+        
         font-size: $font-size-3xl;
 
-        color: $color-white;
+        @media (max-width: $screen-sm) {
+          font-size: $font-size-lg;
+        }
       }
 
       .left-quote {
@@ -85,6 +104,24 @@
     width: 65%;
     height: 65vh;
 
+    overflow: hidden;
+
+    @media (max-width: 1450px) {
+      height: 70vh;
+    }
+  
+    @media (max-width: $screen-xl) {
+      width: 75%;
+    }
+  
+    @media (max-width: $screen-lg) {
+      width: 85%;
+    }
+  
+    @media (max-width: $screen-md) {
+      width: 95%;
+    }
+
     background-color: $color-secondary;
     border-radius: 10px;
 
@@ -92,9 +129,19 @@
     align-items: center;
     z-index: 100;
 
+    flex-direction: row;
+
+    @media (max-width: 1450px) {
+      flex-direction: column;
+    }
+
     &__left {
       width: 65%;
       height: 100%;
+
+      @media (max-width: 1450px) {
+        width: 100%;
+      }
 
       display: flex;
       align-items: center;
@@ -182,6 +229,10 @@
       height: 100%;
       display: inline-block;
 
+      @media (max-width: 1450px) {
+        width: 100%;
+      }
+
       text-align: center;
 
       padding: 5rem 0;
@@ -205,12 +256,26 @@
         color: $color-white-shade1;
       }
 
+      h3, .separator, .location {
+        @media (max-width: 1450px) {
+          display: none;
+        }
+      }
+
       h5 {
         margin-top: 7rem;
+
+        @media (max-width: 1450px) {
+          margin-top: 2rem;
+        }
       }
 
       .mail {
         margin-top: 5rem;
+
+        @media (max-width: 1450px) {
+          margin-top: 0;
+        }
 
         h2 {
           padding: 0 5rem;
@@ -220,6 +285,15 @@
 
           &:hover {
             text-decoration: underline;
+          }
+
+          @media (max-width: 1450px) {
+            display: inline-block;
+
+            border: 1px solid $color-primary;
+            padding: 1rem 3rem;
+
+            border-radius: 1rem;
           }
         }
       }
@@ -254,6 +328,18 @@
 
       height: 25vh;
 
+      @media (max-width: $screen-xl) {
+        width: 75%;
+      }
+    
+      @media (max-width: $screen-lg) {
+        width: 85%;
+      }
+    
+      @media (max-width: $screen-md) {
+        width: 95%;
+      }
+
       bottom: 10%;
       left: 50%;
       transform: translate(-50%, 0);
@@ -285,6 +371,8 @@
         margin-top: 2rem;
         height: 5rem;
 
+        // width: 100%;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -307,6 +395,10 @@
         input {
           height: 100%;
           width: 30rem;
+
+          @media (max-width: 1450px) {
+            width: 80%;
+          }
 
           background-color: transparent;
 

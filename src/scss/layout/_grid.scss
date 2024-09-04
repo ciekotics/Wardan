@@ -76,10 +76,15 @@ menu-card (all-items)
   margin-block-end: 5rem;
   grid-template-columns: repeat(2, 1fr);
 
-  @media (min-width: 992px) {
+  @media (max-width: $screen-xl) {
+
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: $screen-xl) {
 
     position: relative;
-    column-gap: 9rem;
+    column-gap: 5rem;
 
     &::before {
 
@@ -96,7 +101,7 @@ menu-card (all-items)
 
   @media (min-width: 1200px) {
 
-    gap: 2rem 20rem;
+    gap: 2rem 10rem;
     margin-block-end: 5.5rem;
   }
 }

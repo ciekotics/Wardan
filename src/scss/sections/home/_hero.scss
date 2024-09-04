@@ -59,11 +59,13 @@
       margin-top: 5rem;
 
       .title {
-        text-decoration: underline;
+        // text-decoration: underline;
         font-weight: normal;
-        font-size: $font-size-md;
+        font-size: $font-size-sm;
+        width: 100%;
+        color: $color-black-shade2;
 
-        margin-left: 1.5rem;
+        // margin-left: 1.5rem;
       }
 
       .one {

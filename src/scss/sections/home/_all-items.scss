@@ -1,7 +1,23 @@
 #all-items {
   min-height: 75vh;
-  padding: 5rem 20rem;
+  padding: 1rem 20rem;
   text-align: center;
+
+  @media (max-width: $screen-2xl) {
+    padding: 1rem 15rem 0;
+  }
+
+  @media (max-width: $screen-xl) {
+    padding: 1rem 10rem 0;
+  }
+
+  @media (max-width: $screen-lg) {
+    padding: 1rem 8rem 0;
+  }
+
+  @media (max-width: $screen-md) {
+    padding: 1rem 2rem 0;
+  }
 
   .menu {
     .btn {

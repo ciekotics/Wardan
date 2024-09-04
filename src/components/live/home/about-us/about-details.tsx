@@ -2,7 +2,7 @@
 
 import Separator from "@/components/shared/separator";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaRegPlayCircle } from "react-icons/fa";
 
 // CUSTOM IMPORTS
@@ -52,16 +52,18 @@ const AboutUsDetails = () => {
   }, []);
 
   return (
-    <div>
+    <React.Fragment>
       <div className="container">
         <div className="about-content mt-20">
           <h2 className="label" id="about-label">
             About Us
           </h2>
-          <div style={{
-            opacity: 0.5
-          }}>
-          <Separator />
+          <div
+            style={{
+              opacity: 0.5,
+            }}
+          >
+            <Separator />
           </div>
           <h3 className="headline">
             Elevating Culinary Creations with the Finest Spices
@@ -82,13 +84,14 @@ const AboutUsDetails = () => {
         <figure className="about-banner">
           <Image
             src={"/images/about-banner.jpg"}
-            width="570"
-            height="570"
+            width={570}
+            height={570}
             loading="lazy"
             alt="about banner"
-            className="about-banner__img"
+            
             data-parallax-item
             data-parallax-speed="1"
+            // style={{ height: "auto", width: "auto" }}
           />
           <div
             className="abs-img-1"
@@ -128,7 +131,7 @@ const AboutUsDetails = () => {
           </div>
         </figure>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

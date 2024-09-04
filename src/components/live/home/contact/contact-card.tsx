@@ -36,6 +36,7 @@ const ContactCard = () => {
           style={{
             opacity: 0.5,
           }}
+          className="separator"
         >
           <Separator />
         </div>
@@ -45,7 +46,7 @@ const ContactCard = () => {
           <h2>wardanspices@gmail.com</h2>
         </div>
 
-        <div className="deg45-box"></div>
+        {/* <div className="deg45-box"></div> */}
 
         <div className="location">
           <h3>Location :</h3>
