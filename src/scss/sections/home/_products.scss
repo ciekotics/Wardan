@@ -49,6 +49,9 @@
           align-items: center;
           justify-content: center;
 
+          background-color: rgba($color-black, 0.3);
+          border-radius: 1rem;
+
           &__left {
             width: 35%;
             height: 100%;
@@ -113,14 +116,14 @@
 
             .heading {
               color: $color-white;
-              background-color: rgba($color-black, 0.2);
+              // background-color: rgba($color-black, 0.2);
               padding: 1rem 5rem;
 
               border-radius: 1rem;
             }
 
             .description {
-              background-color: rgba($color-black, 0.4);
+              // background-color: rgba($color-black, 0.4);
               padding: 2rem 0 2rem 1rem;
               color: $color-white;
 
@@ -136,6 +139,10 @@
               flex-direction: column;
               gap: 0.5rem;
               align-items: flex-end;
+
+              p {
+                color: $color-white;
+              }
 
               .sizes {
                 display: flex;

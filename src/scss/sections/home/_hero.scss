@@ -239,10 +239,35 @@
       &__item {
         width: 90%;
         height: 10rem;
-
-        // border: 2px solid rgba($color-primary-dark, 0.2);
         border-radius: 1rem;
         position: relative;
+        overflow: hidden; // Ensure content doesn’t overflow its bounds
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -2;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 1rem;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(
+            $color-black-shade1,
+            0.4
+          ); // Adjust opacity as needed
+          z-index: -1; // Ensure it sits below the image
+        }
 
         &-loading {
           background-color: rgba($color-black-shade3, 0.3);
@@ -272,7 +297,7 @@
           transform: translate(-50%, 0);
           z-index: 100;
           width: 80%;
-          height: 20%;
+          height: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -280,7 +305,7 @@
 
           p {
             position: relative;
-            
+
             &.title {
               width: 100%;
               height: 40%;
@@ -313,6 +338,39 @@
                 );
                 animation: shimmer 1.5s infinite;
               }
+            }
+          }
+        }
+        
+        .content__loaded {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translate(-50%, 0);
+          z-index: 100;
+          width: 80%;
+          height: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          
+          p {
+            color: $color-white;
+            &.title {
+              width: 100%;
+              height: 50%;
+              font-size: $font-size-md;
+              
+              font-weight: $font-bold;
+            }
+  
+            &.date {
+              width: 100%;
+              height: 30%;
+
+              font-size: $font-size-xs;
             }
           }
         }
