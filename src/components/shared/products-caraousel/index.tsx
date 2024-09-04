@@ -55,6 +55,24 @@ const ProductsCarousel = () => {
                   </span>
                 </div>
               </div>
+
+              <div className="content__middle">
+                <div className="sizes-wrapper">
+                  <p>Sizes :</p>
+
+                  <span className="sizes">
+                    {item.sizes.map((size, index) => {
+                      return (
+                        <span key={index} className="sizes__item">
+                          {size}
+                        </span>
+                      );
+                    })}
+                  </span>
+                </div>
+                <h1 className="heading">{item.heading()}</h1>
+                <h5 className="description">{item.description1}</h5>
+              </div>
             </div>
           </div>
         ))}
