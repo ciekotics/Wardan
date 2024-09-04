@@ -1,6 +1,7 @@
 // import { GoLocation } from "react-icons/go";
 // import { BsFillHexagonFill, BsStars } from "react-icons/bs";
 // import { IoMailOutline } from "react-icons/io5";
+import Image from "next/image";
 import Link from "next/link";
 
 const Item1 = () => {
@@ -24,9 +25,19 @@ const Item1 = () => {
         <h5 className="h5">wardanspices@gmail.com</h5>
         </span> */}
 
+      <div className="content-image">
+        <Image
+          src={"/images/ws-spices.png"}
+          alt=""
+          width={400}
+          height={400}
+          priority
+        />
+      </div>
+
       <Link
         href={"/"}
-        className="w-full flex items-center justify-center mt-50"
+        className="w-full flex items-center justify-center "
       >
         <h2 className="products-btn">Our Products</h2>
       </Link>

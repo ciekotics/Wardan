@@ -36,27 +36,43 @@
 
     text-align: center;
 
-    // border: 2px solid rgba($color-primary, 0.2);
     border-radius: 20px;
     overflow: hidden;
 
     // ============ Ensure the child images can use layout="fill" properly ======== //
-
+    
     position: relative;
     // ============================================================================ //
   }
-
+  
   .item-1 {
+    // border: 2px solid rgba($color-primary, 0.2);
     .content {
-      width: 80%;
+      width: 100%;
       height: 100%;
 
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
 
       margin-top: 5rem;
+
+      &-image {
+        width: 55%;
+        height: auto;
+        aspect-ratio: 1;
+        @media (max-width: $screen-2xl) {
+          width: 40%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: contain;
+          object-position: center;
+        }
+      }
 
       .title {
         // text-decoration: underline;
@@ -115,9 +131,10 @@
       }
 
       .products-btn {
+        margin-top: 3rem;
         width: fit-content;
 
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 5rem;
         border: 0.5rem solid rgba($color-white, 0.5);
         border-radius: 2rem;
 

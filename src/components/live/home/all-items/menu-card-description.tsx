@@ -14,7 +14,7 @@ const CardDescription = ({
   title: string;
   description: string;
 }) => {
-  const [hasHovered, setHasHovered] = useState(true);
+  // const [hasHovered, setHasHovered] = useState(true);
   return (
     <div className={`content-wrapper`}>
       <div className="title-wrapper">
@@ -22,18 +22,19 @@ const CardDescription = ({
         <span className="span">
           <span
             className="order-text-wrapper"
-            onClick={() => setHasHovered(!hasHovered)}
+            // onClick={() => setHasHovered(!hasHovered)}
           >
             <span>Order</span>
             <IoIosArrowForward
-              className={`icon-transition ${
-                hasHovered ? "inline-block" : "hidden"
-              }`}
+              className={`icon-transition`}
+              // className={`icon-transition ${
+              //   hasHovered ? "inline-block" : "hidden"
+              // }`}
             />
           </span>
         </span>
       </div>
-      {hasHovered && (
+      {/* {hasHovered && ( */}
         <p className="partners-show-wrapper transition-all">
           {OUR_PARTNERS.map((item, index) => (
             <span key={index} className="partners-show-wrapper__item">
@@ -47,11 +48,12 @@ const CardDescription = ({
             </span>
           ))}
         </p>
-      )}
+      {/* )} */}
       <p
-        className={`p ${
-          hasHovered ? "mt-3" : ""
-        }`}
+        className={`p`}
+        // className={`p ${
+        //   hasHovered ? "mt-3" : ""
+        // }`}
       >
         {description}
       </p>
