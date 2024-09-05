@@ -5,9 +5,9 @@ import Item3 from "./item-3";
 const HeroSection = () => {
   return (
     <section id="hero" className="grid-2-4-1">
-      <div className="item-1">
+      {/* <div className="item-1">
         <Item1 />
-      </div>
+      </div> */}
       <div className="item-2">
         <Item2 />
       </div>
