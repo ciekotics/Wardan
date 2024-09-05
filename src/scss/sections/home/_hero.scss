@@ -250,9 +250,15 @@
           bottom: 3rem;
           right: 3rem;
 
+          box-shadow: none;
+
           @media (max-width: $screen-md) {
-            right: 5rem;
-            bottom: 5rem;
+            width: 100%;
+            right: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
 
           border: none;
@@ -264,12 +270,21 @@
           // transform: translateY(-50%);
           // background: rgba(0, 0, 0, 0.5);
 
+          &:focus {
+            outline: none; /* Remove default focus outline */
+          }
+
           .buttons {
             width: fit-content;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 1rem;
+
+            @media (max-width: $screen-md) {
+              width: 80vw;
+              justify-content: space-between;
+            }
 
             button {
               padding: 1rem;
@@ -282,6 +297,11 @@
 
               &:hover {
                 opacity: 1;
+              }
+
+              &:focus {
+                outline: 2px solid #f0f0f0; 
+                outline-offset: 4px;
               }
             }
           }
