@@ -10,7 +10,7 @@ import SliderContent from "./slider-content";
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalItems = BANNER_SLIDES.length;
-  const [iconSize, setIconSize] = useState(window.innerWidth > 768 ? 35 : 20);
+  const [iconSize, setIconSize] = useState(35);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
