@@ -16,11 +16,9 @@ const TopNewsItem = () => {
 
   if (isLoading) {
     return (
-      <div className="top-news__item top-news__item-loading">
-        <div className="content">
-          <p className="title loading"></p>
-          <p className="date loading"></p>
-        </div>
+      <div className="top-news--loader-wrapper">
+        <div className="top-news--loader"></div>
+        <div></div>
       </div>
     );
   }
@@ -29,7 +27,12 @@ const TopNewsItem = () => {
     <React.Fragment>
       {allBlogs?.blogs?.map((item, index) => (
         <div className="top-news__item" key={index}>
-          <Image src={item.banner} alt={item.title} layout="fill" objectFit="cover" />
+          <Image
+            src={item.banner}
+            alt={item.title}
+            layout="fill"
+            objectFit="cover"
+          />
           <div className="content__loaded">
             <p className="title">{item.title}</p>
             <p className="date">{item["created-at"]}</p>
