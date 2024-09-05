@@ -390,6 +390,32 @@
           }
         }
       }
+
+      .ofXl__contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 2rem;
+        
+        @media (min-width: $screen-xl) {
+          display: none;
+        }
+        
+        .ofXl__contact {
+
+          border: 1px solid rgba($color-black, 0.1);
+          height: 100%;
+          padding: 0 1rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          font-size: $font-size-md-1;
+          text-transform: uppercase;
+        }
+      }
     }
 
     a {

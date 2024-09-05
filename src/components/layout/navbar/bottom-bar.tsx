@@ -77,15 +77,18 @@ const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
         <NavMenu setToggle={setToggleNav} />
       </motion.div>
 
-      <button
-        className={`nav-open-btn ${scrolled ? "scroll" : "unscroll"}`}
-        aria-label="open menu"
-        onClick={() => setToggleNav(!toggleNav)}
-      >
-        <span className="line line-1"></span>
-        <span className="line line-2"></span>
-        <span className="line line-3"></span>
-      </button>
+      <div className="ofXl__contact-wrapper">
+        <div className="ofXl__contact">Contact Us</div>
+        <button
+          className={`nav-open-btn ${scrolled ? "scroll" : "unscroll"}`}
+          aria-label="open menu"
+          onClick={() => setToggleNav(!toggleNav)}
+        >
+          <span className="line line-1"></span>
+          <span className="line line-2"></span>
+          <span className="line line-3"></span>
+        </button>
+      </div>
 
       <div
         className={`overlay ${toggleNav ? "active" : ""}`}

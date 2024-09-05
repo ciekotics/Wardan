@@ -7,7 +7,7 @@ import TopNewsItem from "./top-news-item";
 const Item3 = () => {
   return (
     <div className="top-news">
-      <ReduxWrapper loading={LoadingSkeleton()}>
+      <ReduxWrapper loading={null}>
         <TopNewsItem />
       </ReduxWrapper>
     </div>
