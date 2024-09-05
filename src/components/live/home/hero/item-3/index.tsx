@@ -7,7 +7,7 @@ import TopNewsItem from "./top-news-item";
 const Item3 = () => {
   return (
     <div className="top-news">
-      <ReduxWrapper loading={null}>
+      <ReduxWrapper loading={LoadingSkeleton()}>
         <TopNewsItem />
       </ReduxWrapper>
     </div>
@@ -16,8 +16,8 @@ const Item3 = () => {
 
 // A separate component for loading skeleton
 const LoadingSkeleton = () => (
-  <React.Fragment>
-    {Array.from({ length: 3 }).map((_, index) => {
+  <div className="top-news--loader-wrapper">
+    {/* {Array.from({ length: 3 }).map((_, index) => {
         return (
           <div key={index} className="top-news__item top-news__item-loading">
             <div className="content">
@@ -27,8 +27,10 @@ const LoadingSkeleton = () => (
             </div>
           </div>
         );
-      })}
-  </React.Fragment>
+      })} */}
+      <div className="top-news--loader"></div>
+      <div></div>
+  </div>
 );
 
 export default Item3;
