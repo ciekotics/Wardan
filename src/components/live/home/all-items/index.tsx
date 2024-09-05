@@ -18,6 +18,10 @@ const AllItemsSection = () => {
       </div>
 
       <Products />
+
+      <div className="pattern1">
+        {/* <Image src={"/images/pattern-1.png"} alt="" width={300} height={300} /> */}
+      </div>
     </section>
   );
 };

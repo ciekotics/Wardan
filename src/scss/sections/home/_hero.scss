@@ -230,6 +230,11 @@
           bottom: 3rem;
           right: 3rem;
 
+          @media (max-width: $screen-md) {
+            right: 5rem;
+            bottom: 5rem;
+          }
+
           border: none;
           color: white;
           font-size: 2rem;

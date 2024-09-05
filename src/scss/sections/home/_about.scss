@@ -28,7 +28,6 @@
       grid-template-columns: 0.7fr 1fr;
       gap: 3rem;
     }
-
   }
 
   .about-content {
@@ -164,22 +163,24 @@
     }
   }
 
-  // .pattern1 {
-  //   position: absolute;
+  .pattern1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg); /* Rotate the div by 45 degrees */
+    bottom: -50%;
+    z-index: -1;
+    width: 30vw; /* Size of the div */
+    height: 30vw; /* Size of the div */
+    background: url("../../../../public/images/pattern-1.png") repeat;
+    background-size: 10rem 10rem; /* Size of each repeated pattern image */
+    opacity: 0.5;
 
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   z-index: -1;
-  //   width: 65vw;
-  //   height: auto;
-  //   aspect-ratio: 1;
+    @media (max-width: $screen-md) {
+      width: 50vw;
+      height: 50vh;
+      transform: translateX(-50%) rotate(90deg);
 
-  //   img {
-  //     width: 100%;
-  //     height: 100%;
-
-  //     object-fit: cover;
-  //     object-position: center;
-  //   }
-  // }
+      bottom: -5%;
+    }
+  }
 }

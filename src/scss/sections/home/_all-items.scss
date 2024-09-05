@@ -19,6 +19,26 @@
     padding: 1rem 2rem 0;
   }
 
+  .pattern1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: 38%;
+    z-index: -1;
+    width: 15vw;
+    height: 15vw;
+    background: url("../../../../public/images/pattern-1.png") repeat;
+    background-size: 10rem 10rem;
+    opacity: 0.5;
+
+    @media (max-width: $screen-md) {
+      width: 50vw;
+      height: 50vw;
+
+      bottom: 40.5%;
+    }
+  }
+
   .menu {
     .btn {
       margin-inline: auto;

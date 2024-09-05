@@ -39,10 +39,10 @@ const Slider = () => {
       <div className="carousel-control">
         <div className="buttons">
           <button className="prev" onClick={prevSlide}>
-            <FaArrowLeft size={35} />
+            <FaArrowLeft size={window.innerWidth > 768 ? 35 : 20} />
           </button>
           <button className="next" onClick={nextSlide}>
-            <FaArrowRight size={35} />
+            <FaArrowRight size={window.innerWidth > 768 ? 35 : 20} />
           </button>
         </div>
       </div>
