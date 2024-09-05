@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { BANNER_SLIDES } from "@/config/constants/banner-slides-data";
@@ -10,6 +10,7 @@ import SliderContent from "./slider-content";
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalItems = BANNER_SLIDES.length;
+  const [iconSize, setIconSize] = useState(window.innerWidth > 768 ? 35 : 20);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
@@ -18,6 +19,27 @@ const Slider = () => {
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIconSize(35);
+      } else {
+        setIconSize(20);
+      }
+    };
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="slider-carousel">
@@ -39,10 +61,10 @@ const Slider = () => {
       <div className="carousel-control">
         <div className="buttons">
           <button className="prev" onClick={prevSlide}>
-            <FaArrowLeft size={window.innerWidth > 768 ? 35 : 20} />
+            <FaArrowLeft size={iconSize} />
           </button>
           <button className="next" onClick={nextSlide}>
-            <FaArrowRight size={window.innerWidth > 768 ? 35 : 20} />
+            <FaArrowRight size={iconSize} />
           </button>
         </div>
       </div>
