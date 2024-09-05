@@ -1,0 +1,22 @@
+#blogs,
+#blogpost,
+#allblogs {
+  min-height: 100vh;
+  // height: 100vh;
+
+  margin-top: 15rem;
+  padding: 5rem 20rem;
+}
+
+#blogpost {
+  .blogpost-article {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 3rem;
+  }
+}

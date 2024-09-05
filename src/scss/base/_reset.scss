@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+
+    user-select: none;
 }
 
 html {
@@ -31,7 +33,7 @@ body {
     position: relative;
     
     box-sizing: border-box;
-    padding-top: 3rem;
+    // padding-top: 3rem;
 
     @include respond(tab-port) {
         padding: 0;

@@ -1,0 +1,30 @@
+.blogs-tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 2rem;
+  width: 100%;
+
+  a {
+    color: $color-primary-dark;
+    font-size: $font-size-base;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-child)::after {
+      content: '/';
+      margin-inline: 1rem;
+      text-decoration: none !important;
+    }
+  }
+
+  p {
+    color: $color-black;
+    font-size: $font-size-base;
+  }
+}

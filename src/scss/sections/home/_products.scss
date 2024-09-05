@@ -1,11 +1,30 @@
-// styles.scss
-
 #products {
   width: 100vw;
   height: 85vh;
   margin-top: 5rem;
   margin-bottom: 5rem;
   position: relative;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $screen-md) {
+    height: 90vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../../../public/images/products-bg.jpg") no-repeat
+      center center;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+  }
 
   .products-carousel {
     display: flex;
@@ -18,20 +37,246 @@
       display: flex;
       flex-direction: row;
       transition: transform 0.5s ease-in-out;
-    }
+      width: 100%;
 
-    .carousel-item {
-      flex: 0 0 auto;
-      width: 100%; // Adjust width as needed
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
+      .carousel-item {
+        flex: 0 0 100%; // Ensure each item takes up the full width of the carousel
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 20rem;
+        @media (max-width: $screen-2xl) {
+          padding: 0 15rem;
+        }
+
+        @media (max-width: $screen-xl) {
+          padding: 0 10rem;
+        }
+
+        @media (max-width: $screen-lg) {
+          padding: 0 8rem;
+        }
+
+        @media (max-width: $screen-md) {
+          padding: 0 5rem;
+        }
+
+        .content {
+          width: 100%;
+          height: 85%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+
+          background-color: rgba($color-black, 0.3);
+          border-radius: 1rem;
+
+          @media (max-width: $screen-xl) {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            padding-top: 1.5rem;
+          }
+
+          &__left {
+            width: 35%;
+            height: 100%;
+            perspective: 150rem;
+            position: relative;
+
+            @media (max-width: $screen-xl) {
+              width: 40%;
+              height: 65%;
+            }
+
+            @media (max-width: $screen-md) {
+              width: 65%;
+              height: 55%;
+            }
+
+            &-side {
+              height: 100%;
+              transition: transform 0.8s ease;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              backface-visibility: hidden;
+              border-radius: 3px;
+              overflow: hidden;
+
+              &--front {
+                transform: rotateY(
+                  0deg
+                ); // Ensure initial state is front-facing
+                background-color: transparent;
+                border: none;
+              }
+
+              &--back {
+                transform: rotateY(
+                  180deg
+                ); // Ensure initial state is back-facing
+                background-color: transparent;
+                border: none;
+              }
+
+              img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+              }
+            }
+
+            // Apply hover effect to flip the card
+            &:hover {
+              .content__left-side--front {
+                transform: rotateY(-180deg);
+              }
+
+              .content__left-side--back {
+                transform: rotateY(0deg);
+              }
+            }
+          }
+
+          &__right {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+
+            @media (max-width: $screen-xl) {
+              display: none;
+            }
+
+            gap: 3rem;
+
+            .heading {
+              color: $color-white;
+              // background-color: rgba($color-black, 0.2);
+              padding: 1rem 5rem;
+
+              border-radius: 1rem;
+            }
+
+            .description {
+              // background-color: rgba($color-black, 0.4);
+              padding: 2rem 0 2rem 1rem;
+              color: $color-white;
+
+              border-radius: 1rem;
+
+              letter-spacing: 0.1rem;
+              word-spacing: 0.2rem;
+            }
+
+            .sizes-wrapper {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              align-items: flex-end;
+
+              p {
+                color: $color-white;
+              }
+
+              .sizes {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 2rem;
+                font-size: $font-size-md;
+
+                &__item {
+                  background-color: rgba($color-white, 0.8);
+                  padding: 1rem 3rem;
+
+                  border-radius: 1rem;
+                }
+              }
+            }
+          }
+
+          &__middle {
+            display: flex;
+            // height: 100%;
+            width: 100%;
+            flex-direction: column;
+
+            font-weight: bold;
+
+            // margin-top: 1rem;
+
+            @media (min-width: $screen-xl) {
+              display: none;
+            }
+
+            padding-inline: 10rem;
+
+            @media (max-width: $screen-lg) {
+              // margin-top: 2rem;
+              margin-bottom: 0.5rem;
+              padding-inline: 7rem;
+            }
+
+            @media (max-width: $screen-md) {
+              margin-bottom: 0.5rem;
+              padding-inline: 4rem;
+            }
+
+            .heading {
+              font-weight: $font-bold;
+              color: $color-white;
+
+              width: 100%;
+              text-align: left;
+
+              @media (min-width: $screen-md) and (max-width: $screen-xl) {
+                text-align: center;
+              }
+            }
+
+            .description {
+              color: $color-white-shade1;
+              font-size: $font-size-md;
+
+              line-clamp: 8;
+
+              @media (max-width: $screen-xs) {
+                font-size: $font-size-base;
+              }
+            }
+
+            .sizes-wrapper {
+              margin-top: 1rem;
+
+              p {color: $color-white;font-weight: bold;}
+
+              .sizes {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 1rem;
+                font-size: $font-size-md;
+
+                margin-top: 0.5rem;
+
+                &__item {
+                  background-color: rgba($color-white, 0.8);
+                  padding: 0.5rem 1rem;
+
+                  border-radius: 1rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -39,20 +284,51 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba($color-primary, 0.5);
       border: none;
       color: white;
       font-size: 2rem;
       cursor: pointer;
       z-index: 10;
 
+      width: 5rem;
+      height: 5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 2rem;
+
+      border-radius: 50%;
+
       &.prev {
-        left: 10px;
+        left: 12rem;
+
+        @media (max-width: $screen-lg) {
+          left: 10rem;
+        }
+
+        @media (max-width: $screen-md) {
+          left: 1rem;
+        }
       }
 
       &.next {
-        right: 10px;
+        right: 12rem;
+
+        @media (max-width: $screen-lg) {
+          right: 10rem;
+        }
+
+        @media (max-width: $screen-md) {
+          right: 1rem;
+        }
       }
+    }
+
+    &:hover .carousel-control {
+      background: $color-primary;
     }
   }
 }

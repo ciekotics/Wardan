@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import Separator from '@/components/utils/separator';
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react';
-import { FaRegPlayCircle } from 'react-icons/fa';
+import Separator from "@/components/shared/separator";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+import { FaRegPlayCircle } from "react-icons/fa";
 
 // CUSTOM IMPORTS
 
@@ -50,21 +50,25 @@ const AboutUsDetails = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  
+
   return (
-    <div>
+    <React.Fragment>
       <div className="container">
         <div className="about-content mt-20">
-          <h1 className="" id="about-label">
+          <h2 className="label" id="about-label">
             About Us
-          </h1>
-          <Separator />
-          <h3
-            className=" mt-10"
+          </h2>
+          <div
+            style={{
+              opacity: 0.5,
+            }}
           >
+            <Separator />
+          </div>
+          <h3 className="headline">
             Elevating Culinary Creations with the Finest Spices
           </h3>
-          <p className="text-base mt-10 leading-7 ">
+          <p className="description">
             Where the art of spice blending meets the science of quality and
             flavor. We pride ourselves on crafting the finest spices that add
             zest and flavor to kitchens around the globe. Quality is at the
@@ -72,48 +76,63 @@ const AboutUsDetails = () => {
             spices and experience the passion and dedication that goes into
             every product we create.
           </p>
-          <div className="mt-10 font-bold text-white text-lg">Contact On</div>
-          <a href="tel:+804001234567" className="text-2xl block mb-5">
-            +91 980 123 4567
+          <div className="mobile-text">Mail Us:</div>
+          <a href="tel:+804001234567" className="mobile">
+            wardanspices@gmail.com
           </a>
         </div>
         <figure className="about-banner">
           <Image
             src={"/images/about-banner.jpg"}
-            width="570"
-            height="570"
+            width={570}
+            height={570}
             loading="lazy"
             alt="about banner"
-            className="about-banner__img"
+            
             data-parallax-item
             data-parallax-speed="1"
+            // style={{ height: "auto", width: "auto" }}
           />
-          {/* <div
-            className="abs-img abs-img-1 has-before"
+          <div
+            className="abs-img-1"
             data-parallax-item
             data-parallax-speed="1.75"
           >
-            <div className="h-60 rounded-md overflow-hidden relative">
+            <div className="content-wrapper">
               <video
                 ref={videoRef}
-                src={'/videos/about.mp4'}
+                src={"/videos/about.mp4"}
                 loop
                 muted
-                className="object-cover object-center h-full cursor-pointer"
+                // className="object-cover object-center h-full cursor-pointer"
                 onClick={togglePlay}
               ></video>
-              <div className={`absolute top-0 left-0 w-full h-full bg-stone-800 flex items-center justify-center ${isPlaying ? 'hidden' : 'inline-block'}`}>
-                <FaRegPlayCircle onClick={togglePlay} size={50} className="cursor-pointer" />
+              <div
+                className={`play-icon`}
+                style={{ display: isPlaying ? "none" : "" }}
+              >
+                <FaRegPlayCircle
+                  color="white"
+                  onClick={togglePlay}
+                  size={50}
+                  className="cursor-pointer"
+                />
               </div>
             </div>
-          </div> */}
-          <div className="abs-img abs-img-2 has-before">
-            <Image src={"/images/badge-2.png"} width="133" height="134" loading="lazy" alt="" />
+          </div>
+          <div className="abs-img ">
+            <Image
+              src={"/images/badge-2.png"}
+              width="133"
+              height="134"
+              loading="lazy"
+              alt=""
+            />
           </div>
         </figure>
       </div>
-    </div>
-  )
-}
+    </React.Fragment>
+  );
+};
 
-export default AboutUsDetails
+export default AboutUsDetails;

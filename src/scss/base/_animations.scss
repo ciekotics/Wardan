@@ -1,0 +1,19 @@
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes menuBtn {
+  0% {
+    transform: scaleX(1);
+    background-color: $color-black; // Default color
+  }
+  100% {
+    transform: scaleX(0.7); // Adjust the scaling as needed
+    background-color: $color-black-shade2; // Change color during animation
+  }
+}

@@ -17,9 +17,70 @@
 }
 
 @each $key, $value in $margins {
+  .mt-#{$key} {
+    @include margin-top($value);
+  }
+}
+
+@each $key, $value in $margins {
   .ml-#{$key} {
     @include margin-left($value);
   }
 }
 
 .text-primary { color: $color-primary; }
+.hidden { display: none; }
+.inline-block { display: inline-block; }
+.w-full { width: 100% !important; }
+.w-1\/2 { width: 50% !important; }
+.h-full { height: 100% !important; }
+.flex { display: flex; }
+.items-center { align-items: center !important; }
+.justify-center { justify-content: center !important; }
+.cursor-pointer { cursor: pointer; }
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.wardan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row !important;
+
+  border: none !important;
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+
+  gap: 1rem;
+  background-color: $color-black;
+  color: $color-white;
+  
+  p {
+    font-size: $font-size-base;
+    color: $color-white;
+  }
+}
+
+.wardan-btn-ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row !important;
+
+  border: 0.1rem solid rgba($color-black, 0.5) !important;
+  padding: 0.9rem 3rem;
+  border-radius: 0.5rem;
+
+  gap: 1rem;
+  background-color: $color-white;
+  color: $color-black;
+
+  p {
+    font-size: $font-size-base;
+    color: $color-black;
+  }
+}

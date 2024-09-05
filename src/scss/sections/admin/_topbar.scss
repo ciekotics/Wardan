@@ -1,0 +1,88 @@
+.topbar {
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .searchbar {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .input {
+      &-wrapper {
+        width: 85%;
+        height: 65%;
+
+        padding: 0 1rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        border: 1px solid rgba($color-black-shade3, 0.5);
+        border-radius: 1rem;
+        color: $color-black;
+
+        input {
+          border: none;
+          outline: none;
+          box-shadow: none;
+
+          height: 100%;
+          width: 80%;
+          background-color: transparent;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            font-size: $font-size-base;
+          }
+        }
+      }
+    }
+  }
+
+  .filterby {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 1.5rem;
+
+    cursor: pointer;
+
+    .export-btn,
+    .filter-btn {
+      width: 45%;
+      height: 65%;
+
+      padding: 1rem;
+      border: 1px solid rgba($color-primary, 1);
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      gap: 1rem;
+      padding-left: 2rem;
+
+      font-size: $font-size-md;
+
+      border-radius: 1rem;
+    }
+  }
+}

@@ -26,5 +26,18 @@
 @import './sections/home/products';
 @import './sections/home/about';
 @import './sections/home/contact';
+@import './sections/home/all-items';
+// ADMIN
+@import './sections/admin/topbar';
+@import './sections/admin/dashboard';
+@import './sections/admin/add-blog-title';
+@import './sections/admin/add-blog-description';
+@import './sections/admin/add-blog-banner';
+// BLOGS
+@import './sections/blog/tabs';
+@import './sections/blog/content';
+@import './sections/blog/all-blogs';
 
 @import './pages/home';
+@import './pages/admin';
+@import './pages/blogs';

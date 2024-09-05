@@ -4,6 +4,7 @@ import HeroSection from "./hero"
 import HowItWorksSection from "./how-it-works"
 import ProductsSection from "./products"
 import AboutUsSection from "./about-us"
+import AllItemsSection from "./all-items"
 import ContactSection from "./contact"
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
       <HowItWorksSection />
       <ProductsSection />
       <AboutUsSection />
+      <AllItemsSection />
       <ContactSection />
     </article>
   )

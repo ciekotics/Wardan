@@ -77,12 +77,16 @@ export type AppDispatch = AppStore["dispatch"];
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
+interface StoreProviderProps {
+  children: React.ReactNode;
+  loading?: React.ReactNode; // Optional loading prop
+}
+
 /* PROVIDER */
 export default function StoreProvider({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  loading
+}: StoreProviderProps) {
   const storeRef = useRef<AppStore>();
   if (!storeRef.current) {
     storeRef.current = makeStore();
@@ -90,9 +94,23 @@ export default function StoreProvider({
   }
   const persistor = persistStore(storeRef.current);
 
+  // const storeRef = useRef<AppStore | null>(null);
+
+  // // Initialize store and persistor only once
+  // const store = useMemo(() => {
+  //   if (!storeRef.current) {
+  //     storeRef.current = makeStore();
+  //     setupListeners(storeRef.current.dispatch);
+  //   }
+  //   return storeRef.current;
+  // }, []);
+
+  // // Use memoized persistor
+  // const persistor = useMemo(() => persistStore(store), [store]);
+
   return (
     <Provider store={storeRef.current}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={loading ?? null} persistor={persistor}>
         {children}
       </PersistGate>
     </Provider>

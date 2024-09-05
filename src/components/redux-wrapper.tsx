@@ -1,24 +1,21 @@
 "use client";
 // redux store providers needs to be a client component, but it wouldn't be a nice idea for the layout to be a client component
 
-import React from "react";
+import React, { memo } from "react";
 
 // CUSTOM IMPORTS
 import StoreProvider from "@/store";
 
-const ReduxLayout = ({ children }: { children: React.ReactNode }) => {
+const ReduxLayout = memo(({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+});
 
-  return (
-      <React.Fragment
-      >
-        {children}
-      </React.Fragment>
-  );
-};
+// Setting the display name for better debugging
+ReduxLayout.displayName = 'ReduxLayout';
 
-export const ReduxWrapper = ({ children }: { children: React.ReactNode }) => {
+export const ReduxWrapper = ({ children, loading }: { children: React.ReactNode; loading?: React.ReactNode; }) => {
   return (
-    <StoreProvider>
+    <StoreProvider loading={loading}>
       <ReduxLayout>{children}</ReduxLayout>
     </StoreProvider>
   );

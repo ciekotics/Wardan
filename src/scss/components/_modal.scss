@@ -14,6 +14,18 @@
 
   background-color: transparent;
   cursor: pointer;
+
+  @media (max-width: $screen-2xl) {
+    right: 15rem;
+  }
+
+  @media (max-width: $screen-xl) {
+    right: 10rem;
+  }
+
+  @media (max-width: $screen-md) {
+    right: 0;
+  }
 }
 
 .order-online-modal {
@@ -27,6 +39,10 @@
 
   padding: 1rem;
   text-align: center;
+
+  @media (max-width: $screen-md) {
+    width: 90%;
+  }
 
   .partners {
 
