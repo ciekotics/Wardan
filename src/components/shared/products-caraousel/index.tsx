@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
 
@@ -10,6 +11,9 @@ import { ALL_ITEMS_DATA } from "@/config/constants/all-items-data";
 const ProductsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalItems = ALL_ITEMS_DATA.length;
+  const startX = useRef(0);
+  const endX = useRef(0);
+  const carouselInnerRef = useRef<HTMLDivElement | null>(null);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
@@ -19,11 +23,46 @@ const ProductsCarousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
   };
 
+  const handleTouchStart = (e: TouchEvent) => {
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    endX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (startX.current - endX.current > 50) {
+      nextSlide();
+    } else if (endX.current - startX.current > 50) {
+      prevSlide();
+    }
+  };
+
+  useEffect(() => {
+    const carouselInner = carouselInnerRef.current;
+    if (carouselInner) {
+      carouselInner.addEventListener("touchstart", handleTouchStart);
+      carouselInner.addEventListener("touchmove", handleTouchMove);
+      carouselInner.addEventListener("touchend", handleTouchEnd);
+
+      return () => {
+        carouselInner.removeEventListener("touchstart", handleTouchStart);
+        carouselInner.removeEventListener("touchmove", handleTouchMove);
+        carouselInner.removeEventListener("touchend", handleTouchEnd);
+      };
+    }
+  }, []);
+
   return (
     <div className="products-carousel">
       <div
         className="carousel-inner"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        ref={carouselInnerRef}
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: "transform 0.5s ease",
+        }}
       >
         {ALL_ITEMS_DATA.map((item, index) => (
           <div key={index} className="carousel-item">
@@ -45,13 +84,11 @@ const ProductsCarousel = () => {
                   <p>Sizes :</p>
 
                   <span className="sizes">
-                    {item.sizes.map((size, index) => {
-                      return (
-                        <span key={index} className="sizes__item">
-                          {size}
-                        </span>
-                      );
-                    })}
+                    {item.sizes.map((size, index) => (
+                      <span key={index} className="sizes__item">
+                        {size}
+                      </span>
+                    ))}
                   </span>
                 </div>
               </div>
@@ -61,13 +98,11 @@ const ProductsCarousel = () => {
                   <p>Sizes :</p>
 
                   <span className="sizes">
-                    {item.sizes.map((size, index) => {
-                      return (
-                        <span key={index} className="sizes__item">
-                          {size}
-                        </span>
-                      );
-                    })}
+                    {item.sizes.map((size, index) => (
+                      <span key={index} className="sizes__item">
+                        {size}
+                      </span>
+                    ))}
                   </span>
                 </div>
                 <h1 className="heading">{item.heading()}</h1>
@@ -88,3 +123,5 @@ const ProductsCarousel = () => {
 };
 
 export default ProductsCarousel;
+
+// export default ProductsCarousel;

@@ -1,6 +1,6 @@
 .grid-2-4-1 {
   display: grid;
-  grid-template-columns: 2fr 4fr 1fr; 
+  grid-template-columns: 2fr 1fr; 
   gap: 10px; 
 
   .grid-item {
@@ -8,44 +8,25 @@
     border: 1px solid #ccc;
   }
 
-  @media (max-width: $screen-2xl) {
-    grid-template-columns: 2fr 4fr; 
-    grid-template-rows: 2fr 2fr; 
-    grid-template-areas:
-      "item-2 item-2"
-      "item-1 item-3";
+  // @media (max-width: $screen-2xl) {
+  //   grid-template-columns: 2fr 4fr; 
+  //   grid-template-rows: 2fr 2fr; 
+  //   grid-template-areas:
+  //     "item-2 item-2"
+  //     "item-1 item-3";
     
-    .item-1 {
-      grid-area: item-1;
-    }
-    .item-2 {
-      grid-area: item-2;
-    }
-    .item-3 {
-      grid-area: item-3;
-    }
-  }
+  //   .item-1 {
+  //     grid-area: item-1;
+  //   }
+  //   .item-2 {
+  //     grid-area: item-2;
+  //   }
+  //   .item-3 {
+  //     grid-area: item-3;
+  //   }
+  // }
 
   @media (max-width: $screen-xl) {
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr auto 1fr; 
-    grid-template-areas:
-      "item-2"
-      "item-3"
-      "item-1";
-
-    .item-1 {
-      grid-area: item-1;
-    }
-    .item-2 {
-      grid-area: item-2;
-    }
-    .item-3 {
-      grid-area: item-3;
-    }
-  }
-
-  @media (max-width: 767px) {
     grid-template-columns: 1fr; 
     grid-template-rows: 3fr 1fr; 
     grid-template-areas:
