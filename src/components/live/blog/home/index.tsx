@@ -1,12 +1,14 @@
+// import {
+//   useAddBlogMutation,
+//   // useGetDashboardMetricsQuery,
+// } from "@/store/actions/slices/api-slice";
+// import { Blog } from "@/interface";
+// import { useEffect, useState } from "react";
 
-import {
-  useAddBlogMutation,
-  // useGetDashboardMetricsQuery,
-} from "@/store/actions/slices/api-slice";
-import { Blog } from "@/interface";
-import { useEffect, useState } from "react";
+import { Fragment } from "react";
+import FeaturedBlogs from "./featured-blogs";
 
-import { generateSlug } from "@/lib/utils";
+// import { generateSlug } from "@/lib/utils";
 
 const BlogHome = () => {
   // const { data } = useGetDashboardMetricsQuery();
@@ -37,9 +39,37 @@ const BlogHome = () => {
   // };
 
   return (
-    <div>
-      hey
-    </div>
+    <Fragment>
+      <section className="blogs__hero">
+        <div>
+          <h1>
+            Hey, we&apos;re <span className="website-name">Wardan.</span>
+          </h1>
+          <div className="underline"></div>
+          <span className="next-line">
+            See our thoughts, stories, and ideas.
+          </span>
+        </div>
+
+        <div className="subscription-wrapper">
+          <p>
+            In a realm where the art of spice blending dances with the science
+            of quality, we take pride in crafting the finest spices that infuse
+            zest into kitchens worldwide, inviting you to explore our aromatic
+            world and savor the passion behind every exquisite creation.
+          </p>
+
+          <div className="input-wrapper">
+            <input type="text" placeholder="Email Address" />
+            <div className="subscribe">Subscribe</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="featured-blogs">
+        <FeaturedBlogs />
+      </section>
+    </Fragment>
   );
 };
 
