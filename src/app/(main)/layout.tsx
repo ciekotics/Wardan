@@ -12,9 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Wardan - Best Spice Manufacturing Company",
-  description: "Wardan is the leading manufacturer of high-quality spices.",
+  description: "The leading manufacturer of high-quality spices, our main products are Haldi Powder 15g (EAN-8939123850198), Haldi Powder 50g (EAN-8939123850266), Lal Mirch Powder 7g (EAN-8939123851324), Lal Mirch Powder 50g (EAN-893912350402), Jeera Powder 5g (EAN-8939123850570), Jeera Powder 50g (EAN-8939123850648), Dhaniya Powder 10g (EAN-8939123850716), Dhaniya Powder 50g (EAN-8939123850884), Garam Masala 5g (EAN-8939123850952), Garam Masala 50g (EAN-8939123851010)",
   keywords:
-    "spices, spice manufacturing, organic spices, best spices, world best spices, world top manufacturing, world top manufacturing company, spice manufacturing company, manufacturing company, Wardan",
+    "EAN-8939123851010, EAN-8939123850952, EAN-8939123850884, EAN-8939123850716, EAN-8939123850648, EAN-8939123850570, EAN-893912350402, EAN-8939123851324, EAN-8939123850266, EAN-8939123850198,  spices, spice manufacturing, organic spices, best spices, world best spices, world top manufacturing, world top manufacturing company, spice manufacturing company, manufacturing company, Wardan",
   authors: [{ name: "Wardan Team", url: "https://www.wardanspices.com" }],
   robots: "index, follow",
 };
