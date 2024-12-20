@@ -16,7 +16,7 @@ export const BOTTOMBAR_TABS: {
   },
   {
     title: 'contact',
-    href: '/#top-main',
+    href: '/#contact',
   },
   {
     title: 'blogs',

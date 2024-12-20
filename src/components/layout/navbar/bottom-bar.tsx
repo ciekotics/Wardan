@@ -24,16 +24,12 @@ const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
   }, [location]);
 
   useEffect(() => {
-    // Handle window scroll behavior based on toggleNav state
     if (toggleNav) {
-      // Disable scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Enable scrolling
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup function to reset the overflow property
     return () => {
       document.body.style.overflow = "auto";
     };
