@@ -36,7 +36,7 @@ const CardDescription = ({
               <RxCross2 />
             </div>
 
-            <h2>{title}</h2>
+            <h2>{title} Powder</h2>
             <h5>{description}</h5>
 
             {activeProductOnModal ? (
