@@ -24,7 +24,7 @@ const HeaderContent = () => {
     <div className={`header-content ${isScrolled ? "scrolled" : "normal"}`}>
       <Link href={"/"}>
         <Image
-          src={"/images/logo_1.svg"}
+          src={"/images/logo.svg"}
           alt="wardan-app-logo"
           width={150}
           height={120}

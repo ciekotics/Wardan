@@ -28,8 +28,8 @@ const LoadingSkeleton = () => (
           </div>
         );
       })} */}
-      <div className="top-news--loader"></div>
-      <div></div>
+    <div className="top-news--loader"></div>
+    <div></div>
   </div>
 );
 

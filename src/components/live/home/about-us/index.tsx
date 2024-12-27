@@ -5,9 +5,9 @@ const AboutUsSection = () => {
   return (
     <section id='about' aria-labelledby='about-label'>
       <AboutUsDetails />
-      <div className="pattern1">
+      {/* <div className="pattern1"> */}
         {/* <Image src={"/images/pattern-1.png"} alt="" width={300} height={300} /> */}
-      </div>
+      {/* </div> */}
     </section>
   )
 }

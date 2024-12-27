@@ -14,9 +14,9 @@ const HomePage = () => {
     }}>
       
       <HeroSection />
-      <HowItWorksSection />
       <ProductsSection />
       <AboutUsSection />
+      <HowItWorksSection />
       <AllItemsSection />
       <ContactSection />
     </article>

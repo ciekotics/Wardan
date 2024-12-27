@@ -41,39 +41,39 @@ export const ALL_ITEMS_DATA = [
     jeeraBack,
     "Jeera",
     "Manufactured & Packed by Wardan Spices Private Limited.",
-    "Wardan Jeera Powder is made using the advanced LTG technology that keeps its aroma and flavour intact. Jeera is well known for its digestive properties and is used in a variety of Indian Dishes. It’s undoubtedly an inseparable part of every Indian kitchen. It helps to add an earthy and warming feeling to cooking, making it a staple in certain stews and soups, as well as curries Cumin is used mainly where highly spiced foods are preferred.",
-    ['100g', '50g']
+    `Indian Jeera, or cumin, is a prized spice known for its warm, earthy aroma and robust flavor. Grown primarily in Rajasthan and Gujarat, India is the largest producer of jeera, celebrated worldwide for its superior quality. A staple in Indian cuisine, jeera enhances the taste of curries, dals, rice, and spice blends like garam masala. Beyond its culinary appeal, it offers health benefits such as aiding digestion, boosting metabolism, and providing essential nutrients. Rooted in India’s traditions, jeera is also valued in Ayurvedic remedies for its holistic wellness properties. Indian jeera remains a symbol of purity, flavor, and the rich culinary heritage of the country.`,
+    ['5g', '50g']
   ),
   createItem(
     dhaniyaFront,
     dhaniyaBack,
     "Dhaniya",
     "Manufactured & Packed by Wardan Spices Private Limited.",
-    "The Wardan Coriander Powder is all about lending any curry its distinct aroma, flavor and colour. Rich in flavour and taste, Coriander Powder is a must have ingredient if you want to turn your dish truly scrumptious. Indian Food can never taste same without coriander in it. Catch coriander contrived from the farms of Ramganj and Kota (Rajasthan). Although the unique taste and enhances the flavour of different cuisines, and little did we know that this little miraculous powder has abundance of benefits for your health for enhancing the nutritional value of the food.",
-    ['100g']
+    `Indian coriander seeds powder is a staple spice known for its mild, citrusy aroma and warm flavor. Sourced from top-quality seeds grown in regions like Rajasthan and Gujarat, it is widely used in curries, dals, and spice blends. Beyond enhancing taste, it offers health benefits like aiding digestion and boosting appetite. A versatile ingredient, it adds depth and balance to a variety of dishes, making it an essential part of Indian cuisine.`,
+    ['10g', '50g']
   ),
   createItem(
     lalMirchFront,
     lalMirchBack,
     "Lal Mirch",
     "Manufactured & Packed by Wardan Spices Private Limited.",
-    "Red chilli powder is abundantly used in various regular to the exotic dishes.It adds texture, colour, spice and punch to the Indian food to enhance the taste, flavour and look of the dish. Wardan Red Chilli powder is made by Low Temperature Grinding Technology. The raw material is sourced from the prime spice growing farms of of Guntur(Andhra Pradesh) & Byadigi (Karnataka), which not only makes the food taste good, but also provides health benefits. It is an important ingredient for preparing chutneys, curries, gravies and sauces.",
-    ['100g', '50g']
+    `Indian dry red chilli powder, made from sun-dried red chilies, is a quintessential spice known for its vibrant color, fiery flavor, and aroma. Cultivated in regions like Andhra Pradesh, Madhya Pradesh, and Karnataka, India is one of the largest producers of high-quality red chilies. This versatile spice is a staple in Indian cuisine, adding heat and depth to curries, marinades, and spice blends. Beyond its culinary use, red chilli powder is rich in capsaicin, which promotes metabolism and boosts immunity. Indian dry red chilli powder embodies the bold flavors and rich traditions of India’s culinary heritage.`,
+    ['7g', '50g']
   ),
   createItem(
     haldiFront,
     haldiBack,
     "Haldi",
     "Manufactured & Packed by Wardan Spices Private Limited.",
-    "For centuries, turmeric has been a key ingredient in Indian cooking. Turmeric is not only restricted in the culinary world but, has many medicinal and other uses. Wardan Turmeric Powder is a balanced combination of pure quality, richness and strong aroma that enriches the Indian dish by adding distinct colour and flavour. Wardan Turmeric Powder with high curcumin content is procured from the prime spice growing farms of Sangli (Maharashtra) and Erode (Tamil Nadu). It goes through stringent quality control to ensure that it does not contain any adulteration.",
-    ['100g', '50g']
+    `Indian turmeric powder, derived from the finest turmeric roots, is a vibrant and aromatic spice renowned for its earthy flavor and golden hue. Cultivated in regions like Andhra Pradesh, Maharashtra, and Tamil Nadu, Indian turmeric is celebrated globally for its superior quality and high curcumin content. A staple in Indian cuisine, turmeric adds depth to curries, rice, and spice blends while offering powerful health benefits. Known for its anti-inflammatory and antioxidant properties, it supports immunity and overall well-being. Turmeric powder is more than a spice; it’s a symbol of tradition, healing, and the rich culinary heritage of India.`,
+    ['15g', '50g']
   ),
   createItem(
     garamMasalaFront,
     garamMasalaBack,
     "Garam Masala",
     "Manufactured & Packed by Wardan Spices Private Limited.",
-    "Garam Masala is a blessing in disguise. Garam masala is a combination of multiple spices ground together in perfect combination to produce an all purpose Indian spice. Catch Garam Masala is prepared using Low Temperature Grinding, which makes all the simple masalas retain their original taste and complement each other. Garam Masala adds a savoury and spicy taste to any simple dish. Catch Garam Masala can be used across any Indian cuisine.",
-    ['100g', '50g']
+    `Indian garam masala powder is a fragrant, aromatic spice blend that forms the heart of many Indian dishes. Made from a combination of ground spices such as cumin, coriander, cardamom, cloves, and cinnamon, this versatile mix adds depth, warmth, and complexity to curries, stews, rice, and marinades. Garam masala varies by region, with each blend offering a unique flavor profile. It's a staple in Indian kitchens, prized for its ability to enhance the taste of both vegetarian and non-vegetarian dishes. Not only does it elevate the flavor, but garam masala is also known for its health benefits, including aiding digestion and improving metabolism. A symbol of India's rich culinary heritage, garam masala brings a perfect balance of spice and warmth to every meal.`,
+    ['5g', '50g']
   ),
 ];

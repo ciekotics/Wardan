@@ -13,7 +13,7 @@ const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
   const location = usePathname();
 
   const [activeTab, setActiveTab] = useState<
-    "home" | "about wardan" | "products" | "blogs" | "contact"
+    "home" | "about wardan" | "products" | "blogs" | "contact" | "policies"
   >("home");
   const [toggleNav, setToggleNav] = useState(false);
 

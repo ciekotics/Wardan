@@ -1,5 +1,5 @@
 export const BOTTOMBAR_TABS: {
-  title: 'home' | 'about wardan' | 'products' | 'blogs' | 'contact';
+  title: 'home' | 'about wardan' | 'products' | 'blogs' | 'contact' | 'policies';
   href: string;
 }[] = [
   {
@@ -12,14 +12,18 @@ export const BOTTOMBAR_TABS: {
   },
   {
     title: 'products',
-    href: '/#products',
+    href: '/all-products',
+  },
+  {
+    title: 'policies',
+    href: '/policies',
   },
   {
     title: 'contact',
     href: '/#contact',
   },
-  {
-    title: 'blogs',
-    href: '/blogs',
-  },
+  // {
+  //   title: 'blogs',
+  //   href: '/blogs',
+  // },
 ]

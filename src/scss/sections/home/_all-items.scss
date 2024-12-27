@@ -1,22 +1,24 @@
 #all-items {
-  min-height: 75vh;
-  padding: 1rem 20rem;
+  // min-height: 75vh;
+  padding: 0 20rem;
   text-align: center;
 
+  padding-bottom: 2rem !important;
+
   @media (max-width: $screen-2xl) {
-    padding: 1rem 15rem 0;
+    padding: 0 15rem;
   }
 
   @media (max-width: $screen-xl) {
-    padding: 1rem 10rem 0;
+    padding: 0 10rem;
   }
 
   @media (max-width: $screen-lg) {
-    padding: 1rem 8rem 0;
+    padding: 0 8rem;
   }
 
   @media (max-width: $screen-md) {
-    padding: 1rem 2rem 0;
+    padding: 0 2rem;
   }
 
   .pattern1 {
@@ -66,8 +68,11 @@
       // gap: 2rem;
 
       padding: 1rem 0;
-      border: 1px solid rgba($color-primary-light, 0.2);
+      // border: 1px solid rgba($color-primary-light, 0.2);
       border-radius: 1rem;
+
+      background-color: white;
+      box-shadow: 2px 2px 5px 3px rgba($color-black, 0.1);
 
       .card-banner {
         flex-shrink: 0;

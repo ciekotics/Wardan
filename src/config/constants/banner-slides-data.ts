@@ -5,9 +5,9 @@ import slider3 from '../../../public/images/hero-slider-images/hero-slider-3.jpg
 // Slide data
 export const BANNER_SLIDES = [
   {
-    image: slider1,
-    subtitle: "Tradational & Hygine",
-    title: "For the love of \ndelicious food",
+    image: slider3,
+    subtitle: "amazing & delicious",
+    title: "Where every flavor \ntells a story",
     text: "Come with family & feel the joy of mouthwatering food",
   },
   {
@@ -17,9 +17,9 @@ export const BANNER_SLIDES = [
     text: "Come with family & feel the joy of mouthwatering food",
   },
   {
-    image: slider3,
-    subtitle: "amazing & delicious",
-    title: "Where every flavor \ntells a story",
+    image: slider1,
+    subtitle: "Traditional & Hygine",
+    title: "For the love of \ndelicious food",
     text: "Come with family & feel the joy of mouthwatering food",
   },
 ];

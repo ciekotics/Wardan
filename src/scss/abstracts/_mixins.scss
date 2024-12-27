@@ -10,12 +10,15 @@
 }
 
 @mixin threeBoxes {
-  width: 25%;
-  height: 40vh;
+  aspect-ratio: 1;
+  height: 20vh;
 
   // border: 2px solid rgba($color-primary-extralight, 0.2);
-  border: 2px solid rgba($color-primary, 0.2);
-  border-radius: 2rem;
+  border: 15px double rgba(204, 163, 2, 0.2);
+  outline: 5px solid rgba($color-primary, 0.3);
+  outline-offset: -5px;
+  border-radius: 5rem;
+  background-color: rgba($color-primary-extralight, 0.2);
 
   @media (max-width: 1030px) {
     width: 45%;

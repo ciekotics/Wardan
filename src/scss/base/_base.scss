@@ -2,6 +2,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   scroll-snap-type: mandatory y;
+  scroll-behavior: smooth;
 }
 
 .overlay {
@@ -46,5 +47,20 @@
   background-size: 105% 105%;
   background-repeat: no-repeat;
   animation: l5 2s infinite; 
+}
+
+.no-result {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
 }
 

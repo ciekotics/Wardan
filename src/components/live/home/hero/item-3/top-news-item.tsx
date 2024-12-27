@@ -11,7 +11,17 @@ const TopNewsItem = () => {
   } = useGetAllBlogsQuery({});
 
   if (isError) {
-    return <div>Error loading blogs</div>;
+    return (
+      <div className="no-result">
+        <Image
+          src={'/images/no-results.png'}
+          width={250}
+          height={250}
+          alt="no result"
+        />
+        <p>No Blogs Added Yet</p>
+      </div>
+    );
   }
 
   if (isLoading) {

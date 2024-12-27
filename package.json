@@ -10,7 +10,10 @@
     "export": "next export"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@hookform/resolvers": "^3.9.0",
+    "@mui/material": "^6.3.0",
     "@reduxjs/toolkit": "^2.2.7",
     "form-data": "^4.0.0",
     "formidable": "^3.5.1",
