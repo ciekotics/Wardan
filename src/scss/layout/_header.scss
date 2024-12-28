@@ -32,11 +32,11 @@
     transition: height 0.3s ease;
 
     &.scrolled {
-      height: 10rem; // Height when scrolled
+      height: 100px; 
     }
 
     &.normal {
-      height: 14rem; // Default height
+      height: 140px; 
     }
 
     .nav {
