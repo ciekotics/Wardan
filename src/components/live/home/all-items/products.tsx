@@ -4,7 +4,7 @@ import MenuCard from "./menu-card";
 const Products = () => {
   return (
     <>
-      <ul className="grid-list mt-50">
+      <ul >
         {ALL_ITEMS_DATA.map((item, index) => (
           <MenuCard
             key={index}

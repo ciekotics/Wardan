@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
-import React from "react";
 import CardDescription from "./menu-card-description";
+import { IoIosArrowForward } from "react-icons/io";
 
 const MenuCard = ({
   imageSrc,
@@ -15,15 +15,15 @@ const MenuCard = ({
 }) => {
   return (
     <li>
-      <div className="menu-card hover:card">
+      <div className="menu-card">
         <figure
           className="card-banner img-holder"
-          style={{ width: 100, height: 100 }}
+          style={{ width: 200, height: 200 }}
         >
           <Image
             src={imageSrc}
-            width="100"
-            height="100"
+            width="200"
+            height="200"
             loading="lazy"
             alt={altText}
             className="img-cover"
@@ -31,6 +31,7 @@ const MenuCard = ({
         </figure>
 
         <CardDescription title={title} description={description} />
+        <div className="order-now">Order Now <span style={{ marginTop: 5 }}><IoIosArrowForward color="white" /></span></div>
       </div>
     </li>
   );
