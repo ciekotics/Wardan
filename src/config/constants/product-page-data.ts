@@ -2,17 +2,17 @@
 
 export const PRODUCT_PAGE_DATA = [
   {
+    imgSrc: '/images/products-noBg/menu-2.png',
+    title: 'Dhaniya Powder',
+    description: `Indian coriander seeds powder is a staple spice known for its mild, citrusy aroma and warm flavor. Sourced from top-quality seeds grown in regions like Rajasthan and Gujarat, it is widely used in curries, dals, and spice blends.
+Beyond enhancing taste, it offers health benefits like aiding digestion and boosting appetite. A versatile ingredient, it adds depth and balance to a variety of dishes, making it an essential part of Indian cuisine.`,
+  },
+  {
     imgSrc: '/images/products-noBg/menu-1.png',
     title: 'Jeera Powder',
     description: `Indian Jeera, or cumin, is a prized spice known for its warm, earthy aroma and robust flavor. Grown primarily in Rajasthan and Gujarat, India is the largest producer of jeera, celebrated worldwide for its superior quality.
             A staple in Indian cuisine, jeera enhances the taste of curries, dals, rice, and spice blends like garam masala. Beyond its culinary appeal, it offers health benefits such as aiding digestion, boosting metabolism, and providing essential nutrients.
             Rooted in India&apos;s traditions, jeera is also valued in Ayurvedic remedies for its holistic wellness properties. Indian jeera remains a symbol of purity, flavor, and the rich culinary heritage of the country.`,
-  },
-  {
-    imgSrc: '/images/products-noBg/menu-2.png',
-    title: 'Dhaniya Powder',
-    description: `Indian coriander seeds powder is a staple spice known for its mild, citrusy aroma and warm flavor. Sourced from top-quality seeds grown in regions like Rajasthan and Gujarat, it is widely used in curries, dals, and spice blends.
-Beyond enhancing taste, it offers health benefits like aiding digestion and boosting appetite. A versatile ingredient, it adds depth and balance to a variety of dishes, making it an essential part of Indian cuisine.`,
   },
   {
     imgSrc: '/images/products-noBg/menu-3.png',

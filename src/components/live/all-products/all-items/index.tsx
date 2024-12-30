@@ -7,7 +7,7 @@ const AllItems = () => {
     <article id='all-items__content'>
       {PRODUCT_PAGE_DATA.map((item, index) => {
         return (
-          <section className='all-items__content--info' key={index}>
+          <section className={`all-items__content--info ${item.title.split(' ')[0].toLowerCase()}-bg`} key={index}>
             <div className="image">
               <Image
                 src={item.imgSrc}
