@@ -32,27 +32,18 @@ const HowItWorksSection = () => {
         {STRENGTHS_DATA.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <Tooltip 
-                title={
-                  <div>
-                    <h3 style={{ color: 'white' }}>{item.headline}</h3>
-                    <p style={{ color: 'lightgray' }}>{item.paragraph}</p>
-                  </div>
-                } 
-                >
-                <div className="hiw__item">
-                  <item.icon
-                    size={60}
-                    color="#B74652"
-                    style={{
-                      marginBottom: "2rem",
-                    }}
-                  />
-                  {/* <h3>{item.headline}</h3>
-                <p>{item.paragraph}</p> */}
-                </div>
-              </Tooltip>
-              {index < STRENGTHS_DATA.length - 1 ? <div className="line"></div> : null}
+              <div className="hiw__item" key={index}>
+                <item.icon
+                  size={60}
+                  color="#B74652"
+                  style={{
+                    marginBottom: "2rem",
+                  }}
+                />
+                <h3>{item.headline}</h3>
+                <p>{item.paragraph}</p>
+              </div>
+              {/* {index < STRENGTHS_DATA.length - 1 ? <div className="line"></div> : null} */}
             </React.Fragment>
           );
         })}

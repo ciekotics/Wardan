@@ -1,5 +1,5 @@
 #hero {
-  margin: 5rem auto 6rem;
+  // margin: 5rem auto 6rem;
   @include basePadding;
 
   height: 65vh;
@@ -7,20 +7,23 @@
 
   position: relative;
 
-  padding: 1rem 20rem 0;
+  padding: 5rem 20rem;
+
+  background: url('../../../../public/images/pattern-bg-3.png');
+  background-repeat: repeat;
+  background-size: 250px;
   
   @media (max-width: $screen-2xl) {
-    padding: 1rem 15rem 0;
+    padding: 5rem 15rem;
     gap: 2rem 1rem;
   }
 
   @media (max-width: $screen-xl-1) {
     // padding: 1rem 10rem 0;
-    // height: 90vh;
 
     height: 50vh;
 
-    margin-top: 20rem;
+    padding: 20rem 0;
   }
 
   @media (max-width: $screen-xl) {
@@ -29,14 +32,14 @@
   }
 
   @media (max-width: $screen-lg) {
-    padding: 1rem 8rem 0;
-    height: 75vh;
+    padding: 10rem 8rem;
+    height: 65vh;
   }
 
   @media (max-width: $screen-md) {
-    padding: 1rem 2rem 0;
+    padding: 7rem 2rem;
 
-    margin-top: 35px;
+    // padding-top: 35px;
   }
 
   .pattern-abs {
@@ -230,7 +233,7 @@
               justify-content: flex-start;
 
               .subtitle {
-                color: $color-black-shade3;
+                color: $color-white;
 
                 font-size: 2rem !important;
                 font-weight: 600;
@@ -265,8 +268,8 @@
               }
 
               .text {
-                color: $color-black-shade3;
-                font-size: 1.2rem;
+                color: $color-white;
+                font-size: 12px;
               }
             }
           }

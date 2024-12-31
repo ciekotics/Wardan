@@ -6,7 +6,7 @@
   // margin-top: -5rem;
 
   // border-top: 5px double rgba($color-black, 0.1);
-  background-color: rgb(230, 230, 230);
+  background-color: $color-primary-dark;
   position: relative;
 
   margin-bottom: 15rem;
@@ -26,6 +26,10 @@
 
   @media (max-width: $screen-md) {
     padding: 5rem 2rem;
+  }
+
+  h2 {
+    color: $color-white;
   }
   
   .hiw {
@@ -58,7 +62,10 @@
 
     &__item {
       @include threeBoxes;
-      // padding: 7rem 3rem;
+      padding: 1rem;
+      
+      // height: 25%;
+      height: 250px;
 
       cursor: pointer;
       
@@ -69,17 +76,17 @@
 
       // padding-top: 5rem;
 
-      // gap: 1rem;
+      gap: 1rem;
 
-      // h3 {
-      //   font-size: 2rem;
-      //   font-weight: 600;
-      //   letter-spacing: -0.1rem;
-      // }
+      h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -0.1rem;
+      }
 
-      // p {
-      //   font-size: 1.2rem;
-      // }
+      p {
+        font-size: 10px;
+      }
 
       // &:not(:last-child)::after {
       //   content: '';
