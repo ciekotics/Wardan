@@ -18,8 +18,8 @@ const Bottombar = ({ scrolled }: { scrolled: boolean }) => {
   const [toggleNav, setToggleNav] = useState(false);
 
   useEffect(() => {
-    if (location.split("/").includes("blogs")) {
-      setActiveTab("blogs");
+    if (location.split("/").includes("all-products")) {
+      setActiveTab("products");
     }
   }, [location]);
 

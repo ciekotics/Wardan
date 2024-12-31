@@ -52,12 +52,12 @@ const Footer = () => {
       </div>
       <div className="bottom-tabs">
         <div className="w-1/2">Copyright &copy; 2024 wardan</div>
-        <div className="w-1/2 bottom-tabs__links">
+        {/* <div className="w-1/2 bottom-tabs__links">
           <h5>Sitemap</h5>
           <h5>Disclaimer</h5>
           <h5 className="above-md">Privacy Policy</h5>
           <h5 className="below-md">Privacy</h5>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

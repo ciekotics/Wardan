@@ -10,7 +10,7 @@ const Banner = () => {
             <h2>Our Products</h2>
             <h6>Manufactured and Packaged by Wardan Spices Pvt. Ltd.</h6>
             <h5>- Bringing Freshness in your Kitchen</h5>
-            <h5>- 100% Organic</h5>
+            {/* <h5>- 100% Organic</h5> */}
           </div>
 
           <div className="product-btn">

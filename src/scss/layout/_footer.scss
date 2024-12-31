@@ -58,7 +58,7 @@
           height: 100%;
 
           @media (max-width: $screen-xl) {
-            width: 80%;
+            width: 100%;
           }
 
           display: flex;
@@ -242,6 +242,8 @@
 
     background-color: $color-primary-dark;
     color: $color-white-shade1;
+
+    text-align: center;
 
     h5 {
       color: $color-white-shade1;

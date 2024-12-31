@@ -16,7 +16,7 @@ const HowItWorksSection = () => {
   return (
     <section id="hiw">
       <h2>Discover the Best and Authentic Spices from Wardan</h2>
-      <div
+      {/* <div
         style={{
           opacity: 0.5,
         }}
@@ -43,11 +43,11 @@ const HowItWorksSection = () => {
                 <h3>{item.headline}</h3>
                 <p>{item.paragraph}</p>
               </div>
-              {/* {index < STRENGTHS_DATA.length - 1 ? <div className="line"></div> : null} */}
+              {index < STRENGTHS_DATA.length - 1 ? <div className="line"></div> : null}
             </React.Fragment>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 };

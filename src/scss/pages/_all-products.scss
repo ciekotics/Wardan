@@ -79,7 +79,7 @@
           
           font-size: 16px;
           font-weight: light;
-          color: rgb(158, 158, 158);
+          color: black;
           letter-spacing: 2px;
 
           :first-child {
@@ -88,8 +88,8 @@
 
           @media (max-width: 768px) {
             font-size: 13px;
-            color: rgb(210, 210, 210);
-            text-shadow: 1px 1px 0 black;
+            color: black;
+            text-shadow: 1px 1px 0 rgb(212, 212, 212);
           }
         }
       }

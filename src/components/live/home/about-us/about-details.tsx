@@ -105,64 +105,18 @@ const AboutUsDetails = () => {
           </h3>
           <p className="description">
             Welcome to Wardan Spices Private Limited , a brand passionately committed to delivering the finest and purest spices to your kitchen. Established in 2024, our journey began with a simple yet profound mission: to ensure that every household has access to 100% pure, unadulterated spices that contribute to good health and unmatched flavor.
-            <React.Fragment>
-              <span style={{ marginLeft: '2rem', textDecoration: 'underline', cursor: 'pointer' }} onClick={handleClickOpen}>... Read More</span>
-              <BootstrapDialog
-                onClose={handleClose}
-                aria-labelledby="customized-dialog-title"
-                open={open}
-              >
-                <DialogTitle sx={{ m: 0, px: 2, fontSize: '1.8rem', fontWeight: 600 }} id="customized-dialog-title">
-                  About Us
-                </DialogTitle>
-                <IconButton
-                  aria-label="close"
-                  onClick={handleClose}
-                  sx={(theme) => ({
-                    position: 'absolute',
-                    right: 8,
-                    top: 8,
-                    color: theme.palette.grey[500],
-                  })}
-                >
-                  {/* <CloseIcon /> */}
-                </IconButton>
-                <DialogContent dividers>
-                  <Typography sx={{ fontSize: '1.2rem', width: '75%', marginBottom: '1rem' }} gutterBottom>
-                    Welcome to Wardan Spices Private Limited , a brand passionately committed to delivering the finest and purest spices to your kitchen. Established in 2024, our journey began with a simple yet profound mission: to ensure that every household has access to 100% pure, unadulterated spices that contribute to good health and unmatched flavor.
-                  </Typography>
-                  <Typography sx={{ fontSize: '1.2rem', width: '75%', marginBottom: '1rem' }} gutterBottom>
-                    Headquartered at 15 PTR Siding Coal Depot, Howrah - 711102, Wardan Spices was founded with the belief that quality and purity should never be compromised. In a market where adulteration is rampant, we stand apart by pledging to provide only the best, free from any mixtures or impurities.
-                  </Typography>
-                  <Typography sx={{ fontSize: '1.2rem', width: '75%', marginBottom: '1rem' }} gutterBottom>
-                    At Wardan Spices, we understand the pivotal role spices play in Indian households. They are not just ingredients but the essence of every meal. Our carefully sourced and meticulously processed spices are a testament to our unwavering commitment to excellence and authenticity.
-                  </Typography>
-                  <Typography sx={{ fontSize: '1.2rem', width: '75%', marginBottom: '1rem' }} gutterBottom>
-                    Our mission extends beyond delivering premium spices; it is about building trust with millions of customers. With every pack of Wardan Spices, you’re not just buying a product—you’re embracing a promise of purity, health, and unmatched taste.
-                  </Typography>
-                  <Typography sx={{ fontSize: '1.2rem', width: '75%', marginBottom: '1rem', paddingBottom: '1rem' }} gutterBottom>
-                    Join us in our journey to revolutionize the spice industry and bring the joy of genuine flavors to every home. Experience the purity, taste the difference—choose Wardan Spices.
-                  </Typography>
-                </DialogContent>
-                <DialogActions>
-                  <Button
-                    autoFocus
-                    variant="outlined"
-                    onClick={handleClose}
-                    sx={{
-                      borderColor: '#B74652',
-                      color: '#B74652',
-                      '&:hover': {
-                        borderColor: '#B74652',
-                        color: '#B74652',
-                      }
-                    }}
-                  >
-                    Close
-                  </Button>
-                </DialogActions>
-              </BootstrapDialog>
-            </React.Fragment>
+          </p>
+          <p className="description">
+            Headquartered at 15 PTR Siding Coal Depot, Howrah - 711102, Wardan Spices was founded with the belief that quality and purity should never be compromised. In a market where adulteration is rampant, we stand apart by pledging to provide only the best, free from any mixtures or impurities.
+          </p>
+          <p className="description">
+            At Wardan Spices, we understand the pivotal role spices play in Indian households. They are not just ingredients but the essence of every meal. Our carefully sourced and meticulously processed spices are a testament to our unwavering commitment to excellence and authenticity.
+          </p>
+          <p className="description">
+            Our mission extends beyond delivering premium spices; it is about building trust with millions of customers. With every pack of Wardan Spices, you’re not just buying a product—you’re embracing a promise of purity, health, and unmatched taste.
+          </p>
+          <p className="description">
+            Join us in our journey to revolutionize the spice industry and bring the joy of genuine flavors to every home. Experience the purity, taste the difference—choose Wardan Spices.
           </p>
           <div className="mobile-text">Mail Us:</div>
           <a href="tel:+804001234567" className="mobile">
