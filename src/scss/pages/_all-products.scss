@@ -30,6 +30,18 @@
       justify-content: center;
       flex-direction: column;
 
+      @media (max-width: 1024px) {
+        width: 65%;
+      }
+
+      @media (max-width: 768px) {
+        width: 75%;
+      }
+
+      @media (max-width: 540px) {
+        width: 90%;
+      }
+
       gap: 35px;
 
       .title {
@@ -40,6 +52,13 @@
 
         h2 {
           font-size: 85px;
+
+          @media (max-width: 768px) {
+            font-size: 40px;
+            font-weight: 800;
+
+            text-shadow: 2px 2px 5px white;
+          }
         }
 
         h6 {
@@ -57,6 +76,11 @@
 
           :first-child {
             margin-top: 10px;
+          }
+
+          @media (max-width: 768px) {
+            color: white;
+            text-shadow: 1px 1px 0 black;
           }
         }
       }
@@ -77,6 +101,11 @@
           justify-content: center;
 
           font-size: 16px;
+
+          @media (max-width: 768px) {
+            width: 150px;
+            font-size: 14px;
+          }
         }
       }
     }
@@ -104,6 +133,10 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     .jars {
       width: 15%;
       height: 100%;
@@ -113,6 +146,10 @@
       align-items: center;
       justify-content: flex-start;
       gap: 5px;
+
+      @media (max-width: 768px) {
+        width: 50%;
+      }
 
       .jar {
         flex: 1;
@@ -134,8 +171,18 @@
       justify-content: center;
       gap: 10px;
 
+      @media (max-width: 768px) {
+        width: 100%;
+
+        margin-top: 15px;
+      }
+
       &-p {
         font-size: 16px;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
       }
 
       .btns {
@@ -145,6 +192,10 @@
 
         font-size: 16px;
         margin-top: 5px;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
         
         .btn {
           background-color: $color-primary;
@@ -153,6 +204,10 @@
 
           border-radius: 30px;
           box-shadow: 3px 4px 5px 1px rgba($color-primary, 0.5);
+
+          @media (max-width: 768px) {
+            white-space: nowrap;
+          }
         }
       }
     }
@@ -219,6 +274,12 @@
       height: 55vh;
       width: 100%;
 
+      @media (max-width: 768px) {
+        height: fit-content;
+
+        align-items: center;
+      }
+
       display: flex;
       align-items: flex-start;
 
@@ -266,6 +327,27 @@
           text-align: justify;
 
           font-family: 'Cabin', sans-serif;
+
+          @media (max-width: 768px) {
+            font-size: 11px;
+            letter-spacing: 0;
+          }
+        }
+
+        .more {
+          @media (max-width: 768px) {
+            display: block;
+          }
+        }
+
+        .less {
+          @media (max-width: 768px) {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+          }
         }
 
         .actions {
@@ -283,6 +365,10 @@
 
           font-size: 12px;
 
+          @media (max-width: 768px) {
+            font-size: 10px;
+          }
+
           .btn__order-now {
             background-color: $color-primary;
             color: $color-white;
@@ -294,6 +380,12 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+
+            @media (max-width: 768px) {
+              padding: 5px 10px;
+
+              white-space: nowrap;
+            }
           }
 
           .btn__read-more {
@@ -302,6 +394,12 @@
             padding: 15px 35px;
             border-radius: 30px;
             box-shadow: 3px 4px 5px 1px rgba($color-primary, 0.5);
+
+            @media (max-width: 768px) {
+              padding: 5px 10px;
+
+              white-space: nowrap;
+            }
           }
         }
       }

@@ -9,10 +9,19 @@ import Pincode from "./pincode";
 import OrderOnline from "./order-online";
 import SearchProduct from "./search-product";
 import { ReduxWrapper } from "@/components/redux-wrapper";
+import { useEffect, useState } from "react";
 
 const Topbar = () => {
+  const [isWindowLoaded, setIsWindowLoaded] = useState(false);
 
-  const isMd = typeof window !== 'undefined' && window.innerWidth < 800;
+  useEffect(() => {
+    setIsWindowLoaded(true);
+  }, []);
+
+  if (!isWindowLoaded) return null; 
+
+  const isMd = window.innerWidth < 800;
+  
   return (
     <div className="nav__topbar">
       {/* <Pincode /> */}
