@@ -1,21 +1,15 @@
+'use client'
+
 import { ALL_ITEMS_DATA } from "@/config/constants/all-items-data";
-import MenuCard from "./menu-card";
+import { EmblaOptionsType } from "embla-carousel";
+import EmblaCarousel from "@/components/shared/embla";
+
+const OPTIONS: EmblaOptionsType = { loop: true }
 
 const Products = () => {
   return (
     <>
-      <ul >
-        {ALL_ITEMS_DATA.map((item, index) => (
-          <MenuCard
-            key={index}
-            imageSrc={item.imageSrc}
-            title={item.title}
-            // price={item.price}
-            description={item.description}
-            altText={''}
-          />
-        ))}
-      </ul>
+        <EmblaCarousel slides={ALL_ITEMS_DATA} options={OPTIONS} />
     </>
   );
 };

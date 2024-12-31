@@ -14,7 +14,7 @@ const MenuCard = ({
   altText: string;
 }) => {
   return (
-    <li>
+    <div className="menu-card-wrapper">
       <div className="menu-card">
         <figure
           className="card-banner img-holder"
@@ -33,7 +33,7 @@ const MenuCard = ({
         <CardDescription title={title} description={description} />
         <div className="order-now">Order Now <span style={{ marginTop: 5 }}><IoIosArrowForward color="white" /></span></div>
       </div>
-    </li>
+    </div>
   );
 };
 

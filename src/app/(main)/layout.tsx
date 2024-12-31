@@ -6,6 +6,8 @@ import { Navbar, Footer } from "@/components/layout";
 // import AppWrapper from "@/components/app-wrapper";
 
 import "@/scss/main.scss";
+
+import '../embla.css';
 // import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
