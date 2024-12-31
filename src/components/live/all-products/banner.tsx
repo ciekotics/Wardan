@@ -8,7 +8,9 @@ const Banner = () => {
         <div className="banner-content">
           <div className="title">
             <h2>Our Products</h2>
-            <h5>WARDAN SPICES</h5>
+            <h6>Manufactured and Packaged by Wardan Spices Pvt. Ltd.</h6>
+            <h5>- Bringing Freshness in your Kitchen</h5>
+            <h5>- 100% Organic</h5>
           </div>
 
           <div className="product-btn">
@@ -18,7 +20,7 @@ const Banner = () => {
               width={130}
               height={60}
             />
-            <div className="btn">All Products</div>
+            <div className="btn">Explore Products</div>
           </div>
         </div>
       </section>
