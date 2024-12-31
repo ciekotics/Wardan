@@ -14,10 +14,10 @@ export const BOTTOMBAR_TABS: {
     title: 'products',
     href: '/all-products',
   },
-  {
-    title: 'policies',
-    href: '/policies',
-  },
+  // {
+  //   title: 'policies',
+  //   href: '/policies',
+  // },
   {
     title: 'contact',
     href: '/#contact',

@@ -30,15 +30,40 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: height 0.3s ease;
+    align-items: flex-end;
+    transition: all 0.3s ease;
 
     &.scrolled {
       height: 100px; 
+
+      .main-logo {
+        height: 90px;
+        width: 110px;
+  
+        object-fit: cover;
+        object-position: center;
+      }
     }
 
     &.normal {
       height: 140px; 
+
+      .main-logo {
+        height: 120px;
+        width: 130px;
+  
+        object-fit: cover;
+        object-position: center;
+      }
     }
+
+    // .main-logo {
+    //   height: 120px;
+    //   width: 130px;
+
+    //   object-fit: cover;
+    //   object-position: center;
+    // }
 
     .nav {
       flex: 1 1 0%;
@@ -54,6 +79,12 @@
       &__topbar {
         display: flex;
         align-items: center;
+
+        margin-bottom: 10px;
+
+        @media (max-width: 540px) {
+          margin-bottom: 0;
+        }
 
         .icon {
           @media (max-width: $screen-2xl) {
@@ -406,7 +437,7 @@
         .ofXl__contact {
 
           border: 1px solid rgba($color-black, 0.1);
-          height: 100%;
+          height: 45px;
           padding: 0 1rem;
 
           display: flex;

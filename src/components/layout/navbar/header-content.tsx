@@ -29,6 +29,7 @@ const HeaderContent = () => {
           width={150}
           height={120}
           priority
+          className="main-logo"
         />
       </Link>
 
